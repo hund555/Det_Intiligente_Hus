@@ -13,7 +13,7 @@
     <ArduinoProjectType>Sketch</ArduinoProjectType>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <Name>BareMinimum</Name>
+    <Name>Mega2560Master</Name>
     <RootNamespace>BareMinimum</RootNamespace>
     <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
     <ToolchainFlavour>Native</ToolchainFlavour>
@@ -194,7 +194,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Sketch.cpp">
+    <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
