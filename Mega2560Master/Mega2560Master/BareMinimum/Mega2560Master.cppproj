@@ -61,6 +61,13 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
+      <Value>..\include\libraries\Adafruit_SSD1306</Value>
+      <Value>..\include\libraries\Adafruit_BusIO</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -90,6 +97,13 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
+      <Value>..\include\libraries\Adafruit_SSD1306</Value>
+      <Value>..\include\libraries\Adafruit_BusIO</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -144,6 +158,13 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
+      <Value>..\include\libraries\Adafruit_SSD1306</Value>
+      <Value>..\include\libraries\Adafruit_BusIO</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -173,6 +194,14 @@
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
       <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\examples\GFXcanvas</Value>
+      <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
+      <Value>..\include\libraries\Adafruit_SSD1306</Value>
+      <Value>../DS3231</Value>
+      <Value>..\include\libraries\Adafruit_BusIO</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -198,13 +227,253 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DS3231\DS3231.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DS3231\DS3231.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_BusIO\Adafruit_I2CDevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_BusIO\Adafruit_I2CRegister.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_BusIO\Adafruit_SPIDevice.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Adafruit_GFX.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Adafruit_GrayOLED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Adafruit_SPITFT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Adafruit_SPITFT_Macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\examples\GFXcanvas\GFXcanvasSerialDemo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMono12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMono18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMono24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMono9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBoldOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBoldOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBoldOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoBoldOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeMonoOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSans12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSans18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSans24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSans9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBoldOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBoldOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBoldOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansBoldOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSansOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerif12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerif18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerif24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerif9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBoldItalic12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBoldItalic18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBoldItalic24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifBoldItalic9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifItalic12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifItalic18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifItalic24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\FreeSerifItalic9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\Org_01.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\Picopixel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\Tiny3x3a2pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\Fonts\TomThumb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX_Library\gfxfont.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_SSD1306\Adafruit_SSD1306.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_SSD1306\splash.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\libraries\SPI\src\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Wire\src\utility\twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Wire\src\Wire.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\libraries\Adafruit_BusIO\Adafruit_BusIO_Register.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_BusIO\Adafruit_I2CDevice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_BusIO\Adafruit_SPIDevice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\Adafruit_GFX.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\Adafruit_GrayOLED.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\Adafruit_SPITFT.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\examples\GFXcanvas\GFXcanvasSerialDemo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\fontconvert\fontconvert.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX_Library\glcdfont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_SSD1306\Adafruit_SSD1306.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\libraries\SPI\src\SPI.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Wire\src\utility\twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Wire\src\Wire.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
@@ -220,12 +489,31 @@
   <ItemGroup>
     <Folder Include="include\" />
     <Folder Include="include\libraries\" />
+    <Folder Include="include\libraries\Adafruit_BusIO\" />
+    <Folder Include="include\libraries\Adafruit_GFX_Library\" />
+    <Folder Include="include\libraries\Adafruit_GFX_Library\examples\" />
+    <Folder Include="include\libraries\Adafruit_GFX_Library\examples\GFXcanvas\" />
+    <Folder Include="include\libraries\Adafruit_GFX_Library\Fonts\" />
+    <Folder Include="include\libraries\Adafruit_SSD1306\" />
     <Folder Include="include\libraries\SPI\" />
     <Folder Include="include\libraries\SPI\src\" />
+    <Folder Include="include\libraries\Wire\" />
+    <Folder Include="include\libraries\Wire\src\" />
+    <Folder Include="include\libraries\Wire\src\utility\" />
+    <Folder Include="DS3231" />
     <Folder Include="src\" />
     <Folder Include="src\libraries\" />
+    <Folder Include="src\libraries\Adafruit_BusIO\" />
+    <Folder Include="src\libraries\Adafruit_GFX_Library\" />
+    <Folder Include="src\libraries\Adafruit_GFX_Library\examples\" />
+    <Folder Include="src\libraries\Adafruit_GFX_Library\examples\GFXcanvas\" />
+    <Folder Include="src\libraries\Adafruit_GFX_Library\fontconvert\" />
+    <Folder Include="src\libraries\Adafruit_SSD1306\" />
     <Folder Include="src\libraries\SPI\" />
     <Folder Include="src\libraries\SPI\src\" />
+    <Folder Include="src\libraries\Wire\" />
+    <Folder Include="src\libraries\Wire\src\" />
+    <Folder Include="src\libraries\Wire\src\utility\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
