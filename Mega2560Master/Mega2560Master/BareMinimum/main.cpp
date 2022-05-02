@@ -30,6 +30,8 @@ int delay2Sec = 2000;
 String printTime(void);
 void buttonSwich(void);
 
+int* temperature = 0;
+
 void setup (void)
 {
 	Serial.begin(115200);												//set baud rate to 115200 for usart
@@ -52,7 +54,7 @@ void loop (void)
 {
 	display.clearDisplay();
 	
-	display.setTextSize(1);			// Normal 1:1 pixel scale
+	display.setTextSize(2);			// Normal 1:1 pixel scale
 	display.setTextColor(WHITE);	// Draw white text
 	display.setCursor(0,0);			// Start at top-left corner
 	if (showTime)
@@ -66,19 +68,18 @@ void loop (void)
 			previousMillis2 = millis();
 			digitalWrite(SS, LOW);				// enable Slave Select
 			
-			// send test string
-			int* temperature = 0;
+			
 			SPI.transfer(*temperature);
 			Serial.println(*temperature);
 			
 			digitalWrite(SS, HIGH);				// disable Slave Select
-			
-			String dstr = "Temp: ";				//dstr = Display show temperature rounded
-			dstr += *temperature;
-			dstr += (char)247;
-			
-			display.println(dstr);
 		}
+		
+		String dstr = "Temp: ";					//dstr = Display show temperature rounded
+		dstr += *temperature;
+		dstr += (char)247;
+		
+		display.println(dstr);
 	}
 	
 	display.display();
@@ -108,5 +109,6 @@ String printTime()
 
 void buttonSwich()
 {
+	previousMillis10 = millis();
 	showTime = true;
 }
