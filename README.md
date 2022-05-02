@@ -14,5 +14,6 @@ Test af will.
 
 ## Flowchart
 ### Mega2560
-
+![image](Billeder/Mega2560.PNG)
 ### MRKWiFi1010
+![image](Billeder/MRKWiFi1010.PNG)
