@@ -38,7 +38,8 @@ main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\include\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
  ..\\..\ArduinoCore\include\core/Print.h \
  ..\include\libraries\Adafruit_GFX_Library/gfxfont.h \
- ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h
+ ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
+ ../DS3231/DS3231.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -123,3 +124,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ..\include\libraries\Adafruit_GFX_Library/gfxfont.h:
 
 ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h:
+
+../DS3231/DS3231.h:

@@ -32,10 +32,12 @@ C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libA
                               src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o (_Znwj)
 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
                               src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o (_ZN5Print5writeEPKhj)
+C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                              main.o (attachInterrupt)
 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
                               main.o (millis)
 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                              src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o (pinMode)
+                              main.o (pinMode)
 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
                               main.o (_ZN6StringD1Ev)
 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
@@ -196,8 +198,6 @@ Discarded input sections
  .text          0x00000000        0x0 DS3231/DS3231.o
  .data          0x00000000        0x0 DS3231/DS3231.o
  .bss           0x00000000        0x0 DS3231/DS3231.o
- .text._ZN7TwoWire5writeEi
-                0x00000000        0xe DS3231/DS3231.o
  .text._ZN6DS32317isReadyEv
                 0x00000000        0x4 DS3231/DS3231.o
  .text._ZN6DS32317bcd2decEh
@@ -224,16 +224,12 @@ Discarded input sections
                 0x00000000        0xe DS3231/DS3231.o
  .text._ZN6DS323111daysInMonthEjh
                 0x00000000       0x1a DS3231/DS3231.o
- .text._ZN6DS32319date2daysEjhh
-                0x00000000       0x5c DS3231/DS3231.o
  .text._ZN6DS32319dayInYearEjhh
                 0x00000000       0x44 DS3231/DS3231.o
  .text._ZN6DS323110dateFormatEPKc11RTCDateTime
                 0x00000000      0x3c2 DS3231/DS3231.o
  .progmem.gcc_sw_table._ZN6DS323110dateFormatEPKc11RTCDateTime
                 0x00000000       0x74 DS3231/DS3231.o
- .text._ZN6DS32318unixtimeEv
-                0x00000000       0x68 DS3231/DS3231.o
  .text._ZN6DS32316conv2dEPKc
                 0x00000000       0x1c DS3231/DS3231.o
  .text._ZN6DS32313dowEjhh
@@ -246,10 +242,6 @@ Discarded input sections
                 0x00000000       0xee DS3231/DS3231.o
  .progmem.gcc_sw_table._ZN6DS323111setDateTimeEPKcS1_
                 0x00000000       0x26 DS3231/DS3231.o
- .text._ZN6DS323114writeRegister8Ehh
-                0x00000000       0x34 DS3231/DS3231.o
- .text._ZN6DS323111getDateTimeEv
-                0x00000000      0x108 DS3231/DS3231.o
  .text._ZN6DS323115readTemperatureEv
                 0x00000000       0x88 DS3231/DS3231.o
  .text._ZN6DS32319getAlarm1Ev
@@ -260,14 +252,8 @@ Discarded input sections
                 0x00000000       0xa8 DS3231/DS3231.o
  .text._ZN6DS323113getAlarmType2Ev
                 0x00000000       0xe0 DS3231/DS3231.o
- .text._ZN6DS323113readRegister8Eh
-                0x00000000       0x56 DS3231/DS3231.o
  .text._ZN6DS323112enableOutputEb
                 0x00000000       0x32 DS3231/DS3231.o
- .text._ZN6DS323110setBatteryEbb
-                0x00000000       0x3a DS3231/DS3231.o
- .text._ZN6DS32315beginEv
-                0x00000000       0x48 DS3231/DS3231.o
  .text._ZN6DS32318isOutputEv
                 0x00000000       0x12 DS3231/DS3231.o
  .text._ZN6DS32319setOutputE12DS3231_sqw_t
@@ -306,18 +292,6 @@ Discarded input sections
                 0x00000000        0xe DS3231/DS3231.o
  .progmem.data._ZL8dowArray
                 0x00000000        0xc DS3231/DS3231.o
- .progmem.data._ZL9daysArray
-                0x00000000        0xc DS3231/DS3231.o
- .debug_info    0x00000000     0x2c16 DS3231/DS3231.o
- .debug_abbrev  0x00000000      0x44e DS3231/DS3231.o
- .debug_loc     0x00000000     0x2cc8 DS3231/DS3231.o
- .debug_aranges
-                0x00000000      0x1a0 DS3231/DS3231.o
- .debug_ranges  0x00000000      0x1a8 DS3231/DS3231.o
- .debug_line    0x00000000      0xf7b DS3231/DS3231.o
- .debug_str     0x00000000      0xd2b DS3231/DS3231.o
- .comment       0x00000000       0x31 DS3231/DS3231.o
- .debug_frame   0x00000000      0x6ec DS3231/DS3231.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -923,8 +897,6 @@ Discarded input sections
                 0x00000000       0x10 src/libraries/Wire/src/utility/twi.o
  .text.twi_setTimeoutInMicros
                 0x00000000       0x1a src/libraries/Wire/src/utility/twi.o
- .text.twi_readFrom
-                0x00000000      0x1d2 src/libraries/Wire/src/utility/twi.o
  .text.twi_manageTimeoutFlag
                 0x00000000        0xe src/libraries/Wire/src/utility/twi.o
  .group         0x00000000        0x8 src/libraries/Wire/src/Wire.o
@@ -949,13 +921,7 @@ Discarded input sections
                 0x00000000        0x6 src/libraries/Wire/src/Wire.o
  .text._ZN7TwoWire20clearWireTimeoutFlagEv
                 0x00000000        0x6 src/libraries/Wire/src/Wire.o
- .text._ZN7TwoWire11requestFromEhhmhh
-                0x00000000       0xa8 src/libraries/Wire/src/Wire.o
- .text._ZN7TwoWire11requestFromEhhh
-                0x00000000       0x20 src/libraries/Wire/src/Wire.o
  .text._ZN7TwoWire11requestFromEhh
-                0x00000000        0x6 src/libraries/Wire/src/Wire.o
- .text._ZN7TwoWire11requestFromEii
                 0x00000000        0x6 src/libraries/Wire/src/Wire.o
  .text._ZN7TwoWire11requestFromEiii
                 0x00000000        0x4 src/libraries/Wire/src/Wire.o
@@ -1100,6 +1066,13 @@ Discarded input sections
                 0x00000000       0x24 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  .rodata._ZTV5Print
                 0x00000000        0xc C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .text          0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .data          0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .bss           0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .text.detachInterrupt
+                0x00000000       0x54 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .progmem.gcc_sw_table.detachInterrupt
+                0x00000000        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
  .text          0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
  .data          0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
  .bss           0x00000000        0x0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
@@ -1158,10 +1131,6 @@ Discarded input sections
                 0x00000000       0x12 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
  .text._ZN6String6concatERKS_
                 0x00000000        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .text._ZN6String6concatEPKc
-                0x00000000       0x1e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .text._ZN6String6concatEh
-                0x00000000       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
  .text._ZN6String6concatEj
                 0x00000000       0x60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
  .text._ZN6String6concatEl
@@ -1526,8 +1495,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
- .text.libgcc.mul
-                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
  .text.libgcc.div
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
@@ -1558,8 +1525,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
- .text.libgcc.mul
-                0x00000000       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
  .text.libgcc.div
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
@@ -1929,555 +1894,633 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x427a
+.text           0x00000000     0x4daa
  *(.vectors)
  .vectors       0x00000000       0xe4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
+ .progmem.gcc_sw_table.attachInterrupt
+                0x000000e4        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
  .progmem.gcc_sw_table.turnOffPWM
-                0x000000e4       0x24 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000108                . = ALIGN (0x2)
-                0x00000108                __trampolines_start = .
+                0x000000f2       0x24 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000116                . = ALIGN (0x2)
+                0x00000116                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000108        0x0 linker stubs
+ .trampolines   0x00000116        0x0 linker stubs
  *(.trampolines*)
-                0x00000108                __trampolines_end = .
+                0x00000116                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
+ .progmem.data._ZL9daysArray
+                0x00000116        0xc DS3231/DS3231.o
  .progmem.data._ZZ5setupE3__c
-                0x00000108       0x1a main.o
+                0x00000122       0x1a main.o
  .progmem.data._ZL4font
-                0x00000122      0x500 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x0000013c      0x500 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
  .progmem.data._ZZN16Adafruit_SSD13067displayEvE6dlist1
-                0x00000622        0x5 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000063c        0x5 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD130621drawFastVLineInternalEiiijE8postmask
-                0x00000627        0x8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000641        0x8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD130621drawFastVLineInternalEiiijE7premask
-                0x0000062f        0x8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000649        0x8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD13065beginEhhbbE5init5
-                0x00000637        0x6 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000651        0x6 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD13065beginEhhbbE5init3
-                0x0000063d        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000657        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD13065beginEhhbbE5init2
-                0x00000641        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000065b        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZZN16Adafruit_SSD13065beginEhhbbE5init1
-                0x00000645        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000065f        0x4 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZL12splash2_data
-                0x00000649      0x1e0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000663      0x1e0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data._ZL12splash1_data
-                0x00000829      0x2c0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000843      0x2c0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .progmem.data.digital_pin_to_timer_PGM
-                0x00000ae9       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000ae9                digital_pin_to_timer_PGM
+                0x00000b03       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000b03                digital_pin_to_timer_PGM
  .progmem.data.digital_pin_to_bit_mask_PGM
-                0x00000b2f       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000b2f                digital_pin_to_bit_mask_PGM
+                0x00000b49       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000b49                digital_pin_to_bit_mask_PGM
  .progmem.data.digital_pin_to_port_PGM
-                0x00000b75       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000b75                digital_pin_to_port_PGM
+                0x00000b8f       0x46 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000b8f                digital_pin_to_port_PGM
  .progmem.data.port_to_output_PGM
-                0x00000bbb       0x1a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000bbb                port_to_output_PGM
- .progmem.data.port_to_mode_PGM
                 0x00000bd5       0x1a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00000bd5                port_to_mode_PGM
-                0x00000bf0                . = ALIGN (0x2)
- *fill*         0x00000bef        0x1 
+                0x00000bd5                port_to_output_PGM
+ .progmem.data.port_to_mode_PGM
+                0x00000bef       0x1a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000bef                port_to_mode_PGM
+                0x00000c0a                . = ALIGN (0x2)
+ *fill*         0x00000c09        0x1 
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00000bf0                __ctors_start = .
+                0x00000c0a                __ctors_start = .
  *(.ctors)
- .ctors         0x00000bf0        0x2 main.o
- .ctors         0x00000bf2        0x2 src/libraries/Wire/src/Wire.o
- .ctors         0x00000bf4        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00000bf6                __ctors_end = .
-                0x00000bf6                __dtors_start = .
+ .ctors         0x00000c0a        0x2 main.o
+ .ctors         0x00000c0c        0x2 src/libraries/Wire/src/Wire.o
+ .ctors         0x00000c0e        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00000c10                __ctors_end = .
+                0x00000c10                __dtors_start = .
  *(.dtors)
- .dtors         0x00000bf6        0x2 main.o
-                0x00000bf8                __dtors_end = .
+ .dtors         0x00000c10        0x2 main.o
+                0x00000c12                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000bf8        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x00000bf8                __init
+ .init0         0x00000c12        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000c12                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000bf8       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init2         0x00000c12       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000c08       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
-                0x00000c08                __do_copy_data
- .init4         0x00000c22       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
-                0x00000c22                __do_clear_bss
+ .init4         0x00000c22       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_copy_data.o)
+                0x00000c22                __do_copy_data
+ .init4         0x00000c3c       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_clear_bss.o)
+                0x00000c3c                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
  *(.init6)
- .init6         0x00000c32       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
-                0x00000c32                __do_global_ctors
+ .init6         0x00000c4c       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_ctors.o)
+                0x00000c4c                __do_global_ctors
  *(.init6)
  *(.init7)
  *(.init7)
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000c52        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+ .init9         0x00000c6c        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
  *(.init9)
  *(.text)
- .text          0x00000c5a        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
-                0x00000c5a                __vector_38
-                0x00000c5a                __vector_22
-                0x00000c5a                __vector_28
-                0x00000c5a                __vector_1
-                0x00000c5a                __vector_32
-                0x00000c5a                __vector_34
-                0x00000c5a                __vector_24
-                0x00000c5a                __vector_12
-                0x00000c5a                __vector_55
-                0x00000c5a                __vector_46
-                0x00000c5a                __bad_interrupt
-                0x00000c5a                __vector_6
-                0x00000c5a                __vector_31
-                0x00000c5a                __vector_35
-                0x00000c5a                __vector_3
-                0x00000c5a                __vector_30
-                0x00000c5a                __vector_45
-                0x00000c5a                __vector_11
-                0x00000c5a                __vector_54
-                0x00000c5a                __vector_13
-                0x00000c5a                __vector_17
-                0x00000c5a                __vector_19
-                0x00000c5a                __vector_56
-                0x00000c5a                __vector_7
-                0x00000c5a                __vector_49
-                0x00000c5a                __vector_41
-                0x00000c5a                __vector_43
-                0x00000c5a                __vector_27
-                0x00000c5a                __vector_5
-                0x00000c5a                __vector_33
-                0x00000c5a                __vector_47
-                0x00000c5a                __vector_52
-                0x00000c5a                __vector_37
-                0x00000c5a                __vector_4
-                0x00000c5a                __vector_44
-                0x00000c5a                __vector_51
-                0x00000c5a                __vector_9
-                0x00000c5a                __vector_2
-                0x00000c5a                __vector_21
-                0x00000c5a                __vector_15
-                0x00000c5a                __vector_36
-                0x00000c5a                __vector_29
-                0x00000c5a                __vector_40
-                0x00000c5a                __vector_8
-                0x00000c5a                __vector_48
-                0x00000c5a                __vector_14
-                0x00000c5a                __vector_53
-                0x00000c5a                __vector_10
-                0x00000c5a                __vector_50
-                0x00000c5a                __vector_16
-                0x00000c5a                __vector_18
-                0x00000c5a                __vector_20
-                0x00000c5a                __vector_42
-                0x00000c5c                . = ALIGN (0x2)
+ .text          0x00000c74        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
+                0x00000c74                __vector_38
+                0x00000c74                __vector_22
+                0x00000c74                __vector_28
+                0x00000c74                __vector_32
+                0x00000c74                __vector_34
+                0x00000c74                __vector_24
+                0x00000c74                __vector_12
+                0x00000c74                __vector_55
+                0x00000c74                __vector_46
+                0x00000c74                __bad_interrupt
+                0x00000c74                __vector_31
+                0x00000c74                __vector_35
+                0x00000c74                __vector_30
+                0x00000c74                __vector_45
+                0x00000c74                __vector_11
+                0x00000c74                __vector_54
+                0x00000c74                __vector_13
+                0x00000c74                __vector_17
+                0x00000c74                __vector_19
+                0x00000c74                __vector_56
+                0x00000c74                __vector_49
+                0x00000c74                __vector_41
+                0x00000c74                __vector_43
+                0x00000c74                __vector_27
+                0x00000c74                __vector_33
+                0x00000c74                __vector_47
+                0x00000c74                __vector_52
+                0x00000c74                __vector_37
+                0x00000c74                __vector_44
+                0x00000c74                __vector_51
+                0x00000c74                __vector_9
+                0x00000c74                __vector_21
+                0x00000c74                __vector_15
+                0x00000c74                __vector_36
+                0x00000c74                __vector_29
+                0x00000c74                __vector_40
+                0x00000c74                __vector_48
+                0x00000c74                __vector_14
+                0x00000c74                __vector_53
+                0x00000c74                __vector_10
+                0x00000c74                __vector_50
+                0x00000c74                __vector_16
+                0x00000c74                __vector_18
+                0x00000c74                __vector_20
+                0x00000c74                __vector_42
+                0x00000c76                . = ALIGN (0x2)
  *(.text.*)
- .text.setup    0x00000c5c       0x72 main.o
-                0x00000c5c                setup
- .text.loop     0x00000cce      0x12a main.o
-                0x00000cce                loop
+ .text._ZN7TwoWire5writeEi
+                0x00000c76        0xe DS3231/DS3231.o
+                0x00000c76                _ZN7TwoWire5writeEi
+ .text._ZN6DS32319date2daysEjhh
+                0x00000c84       0x5c DS3231/DS3231.o
+                0x00000c84                _ZN6DS32319date2daysEjhh
+ .text._ZN6DS32318unixtimeEv
+                0x00000ce0       0x66 DS3231/DS3231.o
+                0x00000ce0                _ZN6DS32318unixtimeEv
+ .text._ZN6DS323114writeRegister8Ehh
+                0x00000d46       0x34 DS3231/DS3231.o
+                0x00000d46                _ZN6DS323114writeRegister8Ehh
+ .text._ZN6DS323111getDateTimeEv
+                0x00000d7a      0x104 DS3231/DS3231.o
+                0x00000d7a                _ZN6DS323111getDateTimeEv
+ .text._ZN6DS323113readRegister8Eh
+                0x00000e7e       0x56 DS3231/DS3231.o
+                0x00000e7e                _ZN6DS323113readRegister8Eh
+ .text._ZN6DS323110setBatteryEbb
+                0x00000ed4       0x36 DS3231/DS3231.o
+                0x00000ed4                _ZN6DS323110setBatteryEbb
+ .text._ZN6DS32315beginEv
+                0x00000f0a       0x46 DS3231/DS3231.o
+                0x00000f0a                _ZN6DS32315beginEv
+ .text._Z11buttonSwichv
+                0x00000f50        0x8 main.o
+                0x00000f50                _Z11buttonSwichv
+ .text.setup    0x00000f58       0x8c main.o
+                0x00000f58                setup
+ .text._Z9printTimev
+                0x00000fe4      0x13a main.o
+                0x00000fe4                _Z9printTimev
+ .text.loop     0x0000111e      0x132 main.o
+                0x0000111e                loop
  .text.startup._GLOBAL__sub_I_display
-                0x00000df8       0x52 main.o
+                0x00001250       0x52 main.o
  .text.exit._GLOBAL__sub_D_display
-                0x00000e4a        0x6 main.o
+                0x000012a2        0x6 main.o
  .text._ZN8SPIClass16beginTransactionE11SPISettings
-                0x00000e50       0x34 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
-                0x00000e50                _ZN8SPIClass16beginTransactionE11SPISettings
+                0x000012a8       0x34 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+                0x000012a8                _ZN8SPIClass16beginTransactionE11SPISettings
  .text._ZN8SPIClass14endTransactionEv
-                0x00000e84       0x22 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
-                0x00000e84                _ZN8SPIClass14endTransactionEv
+                0x000012dc       0x22 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+                0x000012dc                _ZN8SPIClass14endTransactionEv
  .text._ZN5Print17availableForWriteEv
-                0x00000ea6        0x6 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00000ea6                _ZN5Print17availableForWriteEv
+                0x000012fe        0x6 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000012fe                _ZN5Print17availableForWriteEv
  .text._ZN5Print5flushEv
-                0x00000eac        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00000eac                _ZN5Print5flushEv
+                0x00001304        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001304                _ZN5Print5flushEv
  .text._ZN12Adafruit_GFX9writeLineEiiiij
-                0x00000eae      0x162 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00000eae                _ZN12Adafruit_GFX9writeLineEiiiij
+                0x00001306      0x162 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001306                _ZN12Adafruit_GFX9writeLineEiiiij
  .text._ZN12Adafruit_GFX10writePixelEiij
-                0x00001010        0xe src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001010                _ZN12Adafruit_GFX10writePixelEiij
+                0x00001468        0xe src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001468                _ZN12Adafruit_GFX10writePixelEiij
  .text._ZN12Adafruit_GFX14writeFastVLineEiiij
-                0x0000101e       0x18 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x0000101e                _ZN12Adafruit_GFX14writeFastVLineEiiij
+                0x00001476       0x18 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001476                _ZN12Adafruit_GFX14writeFastVLineEiiij
  .text._ZN12Adafruit_GFX14writeFastHLineEiiij
-                0x00001036       0x18 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001036                _ZN12Adafruit_GFX14writeFastHLineEiiij
+                0x0000148e       0x18 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x0000148e                _ZN12Adafruit_GFX14writeFastHLineEiiij
  .text._ZN12Adafruit_GFX13writeFillRectEiiiij
-                0x0000104e       0x20 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x0000104e                _ZN12Adafruit_GFX13writeFillRectEiiiij
+                0x000014a6       0x20 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000014a6                _ZN12Adafruit_GFX13writeFillRectEiiiij
  .text._ZN12Adafruit_GFX8endWriteEv
-                0x0000106e        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x0000106e                _ZN12Adafruit_GFX10startWriteEv
-                0x0000106e                _ZN12Adafruit_GFX8endWriteEv
+                0x000014c6        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000014c6                _ZN12Adafruit_GFX10startWriteEv
+                0x000014c6                _ZN12Adafruit_GFX8endWriteEv
  .text._ZN12Adafruit_GFX13drawFastVLineEiiij
-                0x00001070       0x72 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001070                _ZN12Adafruit_GFX13drawFastVLineEiiij
+                0x000014c8       0x72 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000014c8                _ZN12Adafruit_GFX13drawFastVLineEiiij
  .text._ZN12Adafruit_GFX13drawFastHLineEiiij
-                0x000010e2       0x72 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000010e2                _ZN12Adafruit_GFX13drawFastHLineEiiij
+                0x0000153a       0x72 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x0000153a                _ZN12Adafruit_GFX13drawFastHLineEiiij
  .text._ZN12Adafruit_GFX8fillRectEiiiij
-                0x00001154       0x8a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001154                _ZN12Adafruit_GFX8fillRectEiiiij
+                0x000015ac       0x8a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000015ac                _ZN12Adafruit_GFX8fillRectEiiiij
  .text._ZN12Adafruit_GFX10fillScreenEj
-                0x000011de       0x3a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000011de                _ZN12Adafruit_GFX10fillScreenEj
+                0x00001636       0x3a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001636                _ZN12Adafruit_GFX10fillScreenEj
  .text._ZN12Adafruit_GFX8drawLineEiiiij
-                0x00001218       0xda src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001218                _ZN12Adafruit_GFX8drawLineEiiiij
+                0x00001670       0xda src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001670                _ZN12Adafruit_GFX8drawLineEiiiij
  .text._ZN12Adafruit_GFX8drawRectEiiiij
-                0x000012f2       0xbe src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000012f2                _ZN12Adafruit_GFX8drawRectEiiiij
+                0x0000174a       0xbe src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x0000174a                _ZN12Adafruit_GFX8drawRectEiiiij
  .text._ZN12Adafruit_GFX13invertDisplayEb
-                0x000013b0        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000013b0                _ZN12Adafruit_GFX13invertDisplayEb
+                0x00001808        0x2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001808                _ZN12Adafruit_GFX13invertDisplayEb
  .text._ZN12Adafruit_GFX11setRotationEh
-                0x000013b2       0x2a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000013b2                _ZN12Adafruit_GFX11setRotationEh
+                0x0000180a       0x2a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x0000180a                _ZN12Adafruit_GFX11setRotationEh
  .text._ZN12Adafruit_GFXC2Eii
-                0x000013dc       0x44 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000013dc                _ZN12Adafruit_GFXC2Eii
-                0x000013dc                _ZN12Adafruit_GFXC1Eii
+                0x00001834       0x44 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001834                _ZN12Adafruit_GFXC2Eii
+                0x00001834                _ZN12Adafruit_GFXC1Eii
  .text._ZN12Adafruit_GFX10drawBitmapEiiPKhiij
-                0x00001420      0x13c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001420                _ZN12Adafruit_GFX10drawBitmapEiiPKhiij
+                0x00001878      0x13c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001878                _ZN12Adafruit_GFX10drawBitmapEiiPKhiij
  .text._ZN12Adafruit_GFX8drawCharEiihjjhh
-                0x0000155c      0x46a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x0000155c                _ZN12Adafruit_GFX8drawCharEiihjjhh
+                0x000019b4      0x46a src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000019b4                _ZN12Adafruit_GFX8drawCharEiihjjhh
  .text._ZN12Adafruit_GFX5writeEh
-                0x000019c6      0x1ac src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x000019c6                _ZN12Adafruit_GFX5writeEh
+                0x00001e1e      0x1ac src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001e1e                _ZN12Adafruit_GFX5writeEh
  .text._ZN12Adafruit_GFX11setTextSizeEhh
-                0x00001b72       0x16 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001b72                _ZN12Adafruit_GFX11setTextSizeEhh
+                0x00001fca       0x16 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001fca                _ZN12Adafruit_GFX11setTextSizeEhh
  .text._ZN12Adafruit_GFX11setTextSizeEh
-                0x00001b88        0x4 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x00001b88                _ZN12Adafruit_GFX11setTextSizeEh
+                0x00001fe0        0x4 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00001fe0                _ZN12Adafruit_GFX11setTextSizeEh
  .text._ZN16Adafruit_SSD13069drawPixelEiij
-                0x00001b8c      0x17a src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001b8c                _ZN16Adafruit_SSD13069drawPixelEiij
+                0x00001fe4      0x17a src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00001fe4                _ZN16Adafruit_SSD13069drawPixelEiij
  .text._ZN8SPIClass8transferEh
-                0x00001d06        0xe src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001d06                _ZN8SPIClass8transferEh
+                0x0000215e        0xe src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000215e                _ZN8SPIClass8transferEh
  .text._ZN16Adafruit_SSD1306C2EhhP7TwoWireamm
-                0x00001d14       0x94 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001d14                _ZN16Adafruit_SSD1306C2EhhP7TwoWireamm
-                0x00001d14                _ZN16Adafruit_SSD1306C1EhhP7TwoWireamm
+                0x0000216c       0x94 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000216c                _ZN16Adafruit_SSD1306C2EhhP7TwoWireamm
+                0x0000216c                _ZN16Adafruit_SSD1306C1EhhP7TwoWireamm
  .text._ZN16Adafruit_SSD1306D2Ev
-                0x00001da8       0x18 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001da8                _ZN16Adafruit_SSD1306D1Ev
-                0x00001da8                _ZN16Adafruit_SSD1306D2Ev
+                0x00002200       0x18 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002200                _ZN16Adafruit_SSD1306D1Ev
+                0x00002200                _ZN16Adafruit_SSD1306D2Ev
  .text._ZN16Adafruit_SSD130616ssd1306_command1Eh
-                0x00001dc0       0xc0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001dc0                _ZN16Adafruit_SSD130616ssd1306_command1Eh
+                0x00002218       0xc0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002218                _ZN16Adafruit_SSD130616ssd1306_command1Eh
  .text._ZN16Adafruit_SSD130613invertDisplayEb
-                0x00001e80       0x8c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001e80                _ZN16Adafruit_SSD130613invertDisplayEb
+                0x000022d8       0x8c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x000022d8                _ZN16Adafruit_SSD130613invertDisplayEb
  .text._ZN16Adafruit_SSD130619ssd1306_commandListEPKhh
-                0x00001f0c      0x14e src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00001f0c                _ZN16Adafruit_SSD130619ssd1306_commandListEPKhh
+                0x00002364      0x14e src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002364                _ZN16Adafruit_SSD130619ssd1306_commandListEPKhh
  .text._ZN16Adafruit_SSD130612clearDisplayEv
-                0x0000205a       0x3c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x0000205a                _ZN16Adafruit_SSD130612clearDisplayEv
+                0x000024b2       0x3c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x000024b2                _ZN16Adafruit_SSD130612clearDisplayEv
  .text._ZN16Adafruit_SSD13065beginEhhbb
-                0x00002096      0x37e src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00002096                _ZN16Adafruit_SSD13065beginEhhbb
+                0x000024ee      0x380 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x000024ee                _ZN16Adafruit_SSD13065beginEhhbb
  .text._ZN16Adafruit_SSD130621drawFastHLineInternalEiiij
-                0x00002414       0xe0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x00002414                _ZN16Adafruit_SSD130621drawFastHLineInternalEiiij
+                0x0000286e       0xe0 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000286e                _ZN16Adafruit_SSD130621drawFastHLineInternalEiiij
  .text._ZN16Adafruit_SSD130621drawFastVLineInternalEiiij
-                0x000024f4      0x16a src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x000024f4                _ZN16Adafruit_SSD130621drawFastVLineInternalEiiij
+                0x0000294e      0x16a src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0000294e                _ZN16Adafruit_SSD130621drawFastVLineInternalEiiij
  .text._ZN16Adafruit_SSD130613drawFastHLineEiiij
-                0x0000265e       0x7e src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x0000265e                _ZN16Adafruit_SSD130613drawFastHLineEiiij
+                0x00002ab8       0x7e src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002ab8                _ZN16Adafruit_SSD130613drawFastHLineEiiij
  .text._ZN16Adafruit_SSD130613drawFastVLineEiiij
-                0x000026dc       0x80 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x000026dc                _ZN16Adafruit_SSD130613drawFastVLineEiiij
+                0x00002b36       0x80 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002b36                _ZN16Adafruit_SSD130613drawFastVLineEiiij
  .text._ZN16Adafruit_SSD13067displayEv
-                0x0000275c      0x1d2 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x0000275c                _ZN16Adafruit_SSD13067displayEv
+                0x00002bb6      0x1d2 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00002bb6                _ZN16Adafruit_SSD13067displayEv
  .text._ZN8SPIClass5beginEv
-                0x0000292e       0x6c src/libraries/SPI/src/SPI.o
-                0x0000292e                _ZN8SPIClass5beginEv
+                0x00002d88       0x6c src/libraries/SPI/src/SPI.o
+                0x00002d88                _ZN8SPIClass5beginEv
  .text.twi_init
-                0x0000299a       0x3c src/libraries/Wire/src/utility/twi.o
-                0x0000299a                twi_init
+                0x00002df4       0x3c src/libraries/Wire/src/utility/twi.o
+                0x00002df4                twi_init
  .text.twi_disable
-                0x000029d6       0x1a src/libraries/Wire/src/utility/twi.o
-                0x000029d6                twi_disable
+                0x00002e30       0x1a src/libraries/Wire/src/utility/twi.o
+                0x00002e30                twi_disable
  .text.twi_setFrequency
-                0x000029f0       0x28 src/libraries/Wire/src/utility/twi.o
-                0x000029f0                twi_setFrequency
+                0x00002e4a       0x28 src/libraries/Wire/src/utility/twi.o
+                0x00002e4a                twi_setFrequency
  .text.twi_transmit
-                0x00002a18       0x50 src/libraries/Wire/src/utility/twi.o
-                0x00002a18                twi_transmit
+                0x00002e72       0x50 src/libraries/Wire/src/utility/twi.o
+                0x00002e72                twi_transmit
  .text.twi_attachSlaveRxEvent
-                0x00002a68        0xa src/libraries/Wire/src/utility/twi.o
-                0x00002a68                twi_attachSlaveRxEvent
+                0x00002ec2        0xa src/libraries/Wire/src/utility/twi.o
+                0x00002ec2                twi_attachSlaveRxEvent
  .text.twi_attachSlaveTxEvent
-                0x00002a72        0xa src/libraries/Wire/src/utility/twi.o
-                0x00002a72                twi_attachSlaveTxEvent
+                0x00002ecc        0xa src/libraries/Wire/src/utility/twi.o
+                0x00002ecc                twi_attachSlaveTxEvent
  .text.twi_releaseBus
-                0x00002a7c        0xc src/libraries/Wire/src/utility/twi.o
-                0x00002a7c                twi_releaseBus
+                0x00002ed6        0xc src/libraries/Wire/src/utility/twi.o
+                0x00002ed6                twi_releaseBus
  .text.twi_handleTimeout
-                0x00002a88       0x28 src/libraries/Wire/src/utility/twi.o
-                0x00002a88                twi_handleTimeout
+                0x00002ee2       0x28 src/libraries/Wire/src/utility/twi.o
+                0x00002ee2                twi_handleTimeout
+ .text.twi_readFrom
+                0x00002f0a      0x1ce src/libraries/Wire/src/utility/twi.o
+                0x00002f0a                twi_readFrom
  .text.twi_writeTo
-                0x00002ab0      0x1d2 src/libraries/Wire/src/utility/twi.o
-                0x00002ab0                twi_writeTo
+                0x000030d8      0x1de src/libraries/Wire/src/utility/twi.o
+                0x000030d8                twi_writeTo
  .text.twi_stop
-                0x00002c82       0x6e src/libraries/Wire/src/utility/twi.o
-                0x00002c82                twi_stop
+                0x000032b6       0x6e src/libraries/Wire/src/utility/twi.o
+                0x000032b6                twi_stop
  .text.__vector_39
-                0x00002cf0      0x25c src/libraries/Wire/src/utility/twi.o
-                0x00002cf0                __vector_39
+                0x00003324      0x25c src/libraries/Wire/src/utility/twi.o
+                0x00003324                __vector_39
  .text._ZN7TwoWire9availableEv
-                0x00002f4c       0x10 src/libraries/Wire/src/Wire.o
-                0x00002f4c                _ZN7TwoWire9availableEv
+                0x00003580       0x10 src/libraries/Wire/src/Wire.o
+                0x00003580                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire4readEv
-                0x00002f5c       0x28 src/libraries/Wire/src/Wire.o
-                0x00002f5c                _ZN7TwoWire4readEv
+                0x00003590       0x28 src/libraries/Wire/src/Wire.o
+                0x00003590                _ZN7TwoWire4readEv
  .text._ZN7TwoWire4peekEv
-                0x00002f84       0x1e src/libraries/Wire/src/Wire.o
-                0x00002f84                _ZN7TwoWire4peekEv
+                0x000035b8       0x1e src/libraries/Wire/src/Wire.o
+                0x000035b8                _ZN7TwoWire4peekEv
  .text._ZN7TwoWire5flushEv
-                0x00002fa2        0x2 src/libraries/Wire/src/Wire.o
-                0x00002fa2                _ZN7TwoWire5flushEv
+                0x000035d6        0x2 src/libraries/Wire/src/Wire.o
+                0x000035d6                _ZN7TwoWire5flushEv
  .text._ZN7TwoWire16onReceiveServiceEPhi
-                0x00002fa4       0x54 src/libraries/Wire/src/Wire.o
-                0x00002fa4                _ZN7TwoWire16onReceiveServiceEPhi
+                0x000035d8       0x54 src/libraries/Wire/src/Wire.o
+                0x000035d8                _ZN7TwoWire16onReceiveServiceEPhi
  .text._ZN7TwoWire16onRequestServiceEv
-                0x00002ff8       0x18 src/libraries/Wire/src/Wire.o
-                0x00002ff8                _ZN7TwoWire16onRequestServiceEv
+                0x0000362c       0x18 src/libraries/Wire/src/Wire.o
+                0x0000362c                _ZN7TwoWire16onRequestServiceEv
  .text._ZN7TwoWire5writeEPKhj
-                0x00003010       0x58 src/libraries/Wire/src/Wire.o
-                0x00003010                _ZN7TwoWire5writeEPKhj
+                0x00003644       0x58 src/libraries/Wire/src/Wire.o
+                0x00003644                _ZN7TwoWire5writeEPKhj
  .text._ZN7TwoWire5writeEh
-                0x00003068       0x5c src/libraries/Wire/src/Wire.o
-                0x00003068                _ZN7TwoWire5writeEh
+                0x0000369c       0x5c src/libraries/Wire/src/Wire.o
+                0x0000369c                _ZN7TwoWire5writeEh
  .text._ZN7TwoWireC2Ev
-                0x000030c4       0x20 src/libraries/Wire/src/Wire.o
-                0x000030c4                _ZN7TwoWireC1Ev
-                0x000030c4                _ZN7TwoWireC2Ev
+                0x000036f8       0x20 src/libraries/Wire/src/Wire.o
+                0x000036f8                _ZN7TwoWireC1Ev
+                0x000036f8                _ZN7TwoWireC2Ev
  .text._ZN7TwoWire5beginEv
-                0x000030e4       0x1e src/libraries/Wire/src/Wire.o
-                0x000030e4                _ZN7TwoWire5beginEv
+                0x00003718       0x1e src/libraries/Wire/src/Wire.o
+                0x00003718                _ZN7TwoWire5beginEv
  .text._ZN7TwoWire8setClockEm
-                0x00003102        0x6 src/libraries/Wire/src/Wire.o
-                0x00003102                _ZN7TwoWire8setClockEm
+                0x00003736        0x6 src/libraries/Wire/src/Wire.o
+                0x00003736                _ZN7TwoWire8setClockEm
  .text._ZN7TwoWire17beginTransmissionEh
-                0x00003108       0x14 src/libraries/Wire/src/Wire.o
-                0x00003108                _ZN7TwoWire17beginTransmissionEh
+                0x0000373c       0x14 src/libraries/Wire/src/Wire.o
+                0x0000373c                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire17beginTransmissionEi
-                0x0000311c        0x2 src/libraries/Wire/src/Wire.o
-                0x0000311c                _ZN7TwoWire17beginTransmissionEi
+                0x00003750        0x2 src/libraries/Wire/src/Wire.o
+                0x00003750                _ZN7TwoWire17beginTransmissionEi
  .text._ZN7TwoWire15endTransmissionEh
-                0x0000311e       0x24 src/libraries/Wire/src/Wire.o
-                0x0000311e                _ZN7TwoWire15endTransmissionEh
+                0x00003752       0x24 src/libraries/Wire/src/Wire.o
+                0x00003752                _ZN7TwoWire15endTransmissionEh
+ .text._ZN7TwoWire11requestFromEhhmhh
+                0x00003776       0xa2 src/libraries/Wire/src/Wire.o
+                0x00003776                _ZN7TwoWire11requestFromEhhmhh
+ .text._ZN7TwoWire11requestFromEhhh
+                0x00003818       0x1e src/libraries/Wire/src/Wire.o
+                0x00003818                _ZN7TwoWire11requestFromEhhh
+ .text._ZN7TwoWire11requestFromEii
+                0x00003836        0x4 src/libraries/Wire/src/Wire.o
+                0x00003836                _ZN7TwoWire11requestFromEii
  .text._ZN7TwoWire15endTransmissionEv
-                0x00003142        0x4 src/libraries/Wire/src/Wire.o
-                0x00003142                _ZN7TwoWire15endTransmissionEv
+                0x0000383a        0x4 src/libraries/Wire/src/Wire.o
+                0x0000383a                _ZN7TwoWire15endTransmissionEv
  .text.startup._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x00003146        0x6 src/libraries/Wire/src/Wire.o
+                0x0000383e        0x6 src/libraries/Wire/src/Wire.o
  .text.__cxa_pure_virtual
-                0x0000314c        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
-                0x0000314c                __cxa_pure_virtual
+                0x00003844        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+                0x00003844                __cxa_pure_virtual
  .text._ZN14HardwareSerial9availableEv
-                0x00003150       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003150                _ZN14HardwareSerial9availableEv
+                0x00003848       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003848                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x00003168       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003168                _ZN14HardwareSerial4peekEv
+                0x00003860       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003860                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x00003184       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003184                _ZN14HardwareSerial4readEv
+                0x0000387c       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x0000387c                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial17availableForWriteEv
-                0x000031ac       0x1e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000031ac                _ZN14HardwareSerial17availableForWriteEv
+                0x000038a4       0x1e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000038a4                _ZN14HardwareSerial17availableForWriteEv
  .text._Z14serialEventRunv
-                0x000031ca       0x78 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000031ca                _Z14serialEventRunv
+                0x000038c2       0x78 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000038c2                _Z14serialEventRunv
  .text._ZN14HardwareSerial17_tx_udr_empty_irqEv
-                0x00003242       0x44 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003242                _ZN14HardwareSerial17_tx_udr_empty_irqEv
+                0x0000393a       0x44 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x0000393a                _ZN14HardwareSerial17_tx_udr_empty_irqEv
  .text._ZN14HardwareSerial5writeEh
-                0x00003286       0x98 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003286                _ZN14HardwareSerial5writeEh
+                0x0000397e       0x98 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x0000397e                _ZN14HardwareSerial5writeEh
  .text._ZN14HardwareSerial5flushEv
-                0x0000331e       0x42 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x0000331e                _ZN14HardwareSerial5flushEv
+                0x00003a16       0x42 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003a16                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5beginEmh
-                0x00003360       0xc6 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003360                _ZN14HardwareSerial5beginEmh
+                0x00003a58       0xc6 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003a58                _ZN14HardwareSerial5beginEmh
  .text.__vector_25
-                0x00003426       0x6c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00003426                __vector_25
+                0x00003b1e       0x6c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003b1e                __vector_25
  .text.__vector_26
-                0x00003492       0x52 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00003492                __vector_26
+                0x00003b8a       0x52 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003b8a                __vector_26
  .text._Z17Serial0_availablev
-                0x000034e4       0x12 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x000034e4                _Z17Serial0_availablev
+                0x00003bdc       0x12 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003bdc                _Z17Serial0_availablev
  .text.startup._GLOBAL__sub_I___vector_25
-                0x000034f6       0x5a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003bee       0x5a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
  .text.initVariant
-                0x00003550        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
-                0x00003550                initVariant
+                0x00003c48        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+                0x00003c48                initVariant
  .text.startup.main
-                0x00003552       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
-                0x00003552                main
+                0x00003c4a       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+                0x00003c4a                main
  .text._ZN5Print5writeEPKhj
-                0x0000356a       0x54 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x0000356a                _ZN5Print5writeEPKhj
+                0x00003c62       0x54 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003c62                _ZN5Print5writeEPKhj
  .text._ZN5Print5writeEPKc
-                0x000035be       0x2a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x000035be                _ZN5Print5writeEPKc
+                0x00003cb6       0x2a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003cb6                _ZN5Print5writeEPKc
  .text._ZN5Print5printEPK19__FlashStringHelper
-                0x000035e8       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x000035e8                _ZN5Print5printEPK19__FlashStringHelper
+                0x00003ce0       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003ce0                _ZN5Print5printEPK19__FlashStringHelper
  .text._ZN5Print5printERK6String
-                0x00003630       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00003630                _ZN5Print5printERK6String
+                0x00003d28       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d28                _ZN5Print5printERK6String
  .text._ZN5Print5printEc
-                0x0000364c        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x0000364c                _ZN5Print5printEc
+                0x00003d44        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d44                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x0000365a        0x6 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x0000365a                _ZN5Print7printlnEv
+                0x00003d52        0x6 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d52                _ZN5Print7printlnEv
  .text._ZN5Print7printlnEPK19__FlashStringHelper
-                0x00003660       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00003660                _ZN5Print7printlnEPK19__FlashStringHelper
+                0x00003d58       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d58                _ZN5Print7printlnEPK19__FlashStringHelper
  .text._ZN5Print7printlnERK6String
-                0x00003680       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x00003680                _ZN5Print7printlnERK6String
+                0x00003d78       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d78                _ZN5Print7printlnERK6String
  .text._ZN5Print11printNumberEmh
-                0x000036a0       0x8e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x000036a0                _ZN5Print11printNumberEmh
+                0x00003d98       0x8e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003d98                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEli
-                0x0000372e       0x8a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x0000372e                _ZN5Print5printEli
+                0x00003e26       0x8a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003e26                _ZN5Print5printEli
  .text._ZN5Print5printEii
-                0x000037b8        0xc C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x000037b8                _ZN5Print5printEii
+                0x00003eb0        0xc C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003eb0                _ZN5Print5printEii
  .text._ZN5Print7printlnEii
-                0x000037c4       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
-                0x000037c4                _ZN5Print7printlnEii
+                0x00003ebc       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00003ebc                _ZN5Print7printlnEii
+ .text.nothing  0x00003edc        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .text.attachInterrupt
+                0x00003ede       0xe6 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x00003ede                attachInterrupt
+ .text.__vector_1
+                0x00003fc4       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x00003fc4                __vector_1
+ .text.__vector_2
+                0x0000401a       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x0000401a                __vector_2
+ .text.__vector_3
+                0x00004070       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x00004070                __vector_3
+ .text.__vector_4
+                0x000040c6       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x000040c6                __vector_4
+ .text.__vector_5
+                0x0000411c       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x0000411c                __vector_5
+ .text.__vector_6
+                0x00004172       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x00004172                __vector_6
+ .text.__vector_7
+                0x000041c8       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x000041c8                __vector_7
+ .text.__vector_8
+                0x0000421e       0x56 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                0x0000421e                __vector_8
  .text.__vector_23
-                0x000037e4       0x94 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x000037e4                __vector_23
- .text.millis   0x00003878       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00003878                millis
- .text.micros   0x00003890       0x4a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x00003890                micros
- .text.delay    0x000038da       0x72 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x000038da                delay
- .text.init     0x0000394c       0xc4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x0000394c                init
+                0x00004274       0x94 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00004274                __vector_23
+ .text.millis   0x00004308       0x18 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00004308                millis
+ .text.micros   0x00004320       0x4a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00004320                micros
+ .text.delay    0x0000436a       0x72 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x0000436a                delay
+ .text.init     0x000043dc       0xc4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x000043dc                init
  .text.turnOffPWM
-                0x00003a10       0xaa C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .text.pinMode  0x00003aba       0x78 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00003aba                pinMode
+                0x000044a0       0xaa C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .text.pinMode  0x0000454a       0x78 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x0000454a                pinMode
  .text.digitalWrite
-                0x00003b32       0x5c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00003b32                digitalWrite
+                0x000045c2       0x5c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x000045c2                digitalWrite
  .text._ZN6StringD2Ev
-                0x00003b8e        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003b8e                _ZN6StringD2Ev
-                0x00003b8e                _ZN6StringD1Ev
+                0x0000461e        0xe C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000461e                _ZN6StringD2Ev
+                0x0000461e                _ZN6StringD1Ev
  .text._ZN6String10invalidateEv
-                0x00003b9c       0x22 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003b9c                _ZN6String10invalidateEv
+                0x0000462c       0x22 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000462c                _ZN6String10invalidateEv
  .text._ZN6String12changeBufferEj
-                0x00003bbe       0x32 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003bbe                _ZN6String12changeBufferEj
+                0x0000464e       0x32 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000464e                _ZN6String12changeBufferEj
  .text._ZN6String7reserveEj
-                0x00003bf0       0x36 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003bf0                _ZN6String7reserveEj
+                0x00004680       0x36 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00004680                _ZN6String7reserveEj
  .text._ZN6String4copyEPKcj
-                0x00003c26       0x3c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003c26                _ZN6String4copyEPKcj
+                0x000046b6       0x3c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000046b6                _ZN6String4copyEPKcj
  .text._ZN6StringC2EPKc
-                0x00003c62       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003c62                _ZN6StringC2EPKc
-                0x00003c62                _ZN6StringC1EPKc
+                0x000046f2       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000046f2                _ZN6StringC2EPKc
+                0x000046f2                _ZN6StringC1EPKc
  .text._ZN6String6concatEPKcj
-                0x00003c8a       0x58 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003c8a                _ZN6String6concatEPKcj
+                0x0000471a       0x58 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000471a                _ZN6String6concatEPKcj
+ .text._ZN6String6concatEPKc
+                0x00004772       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00004772                _ZN6String6concatEPKc
  .text._ZN6String6concatEc
-                0x00003ce2       0x26 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003ce2                _ZN6String6concatEc
+                0x0000478e       0x26 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x0000478e                _ZN6String6concatEc
+ .text._ZN6String6concatEh
+                0x000047b4       0x52 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x000047b4                _ZN6String6concatEh
  .text._ZN6String6concatEi
-                0x00003d08       0x5c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
-                0x00003d08                _ZN6String6concatEi
- .text.__empty  0x00003d64        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
-                0x00003d64                yield
+                0x00004806       0x5c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00004806                _ZN6String6concatEi
+ .text.__empty  0x00004862        0x2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+                0x00004862                yield
  .text.libgcc.div
-                0x00003d66       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
-                0x00003d66                __udivmodsi4
- .text.libgcc   0x00003daa       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
-                0x00003daa                __tablejump2__
+                0x00004864       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_udivmodsi4.o)
+                0x00004864                __udivmodsi4
+ .text.libgcc   0x000048a8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_tablejump2.o)
+                0x000048a8                __tablejump2__
+ .text.libgcc.mul
+                0x000048b8       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_umulhisi3.o)
+                0x000048b8                __umulhisi3
+ .text.libgcc.mul
+                0x000048d6       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_muluhisi3.o)
+                0x000048d6                __muluhisi3
  .text.avr-libc
-                0x00003dba      0x242 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
-                0x00003dba                malloc
-                0x00003eea                free
+                0x000048ea      0x242 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
+                0x000048ea                malloc
+                0x00004a1a                free
  .text.avr-libc
-                0x00003ffc      0x1c0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(realloc.o)
-                0x00003ffc                realloc
+                0x00004b2c      0x1c0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(realloc.o)
+                0x00004b2c                realloc
  .text.avr-libc
-                0x000041bc        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(abort.o)
-                0x000041bc                abort
+                0x00004cec        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(abort.o)
+                0x00004cec                abort
  .text.avr-libc
-                0x000041c4       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
-                0x000041c4                memcpy
+                0x00004cf4       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memcpy.o)
+                0x00004cf4                memcpy
  .text.avr-libc
-                0x000041d6        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
-                0x000041d6                memset
+                0x00004d06        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(memset.o)
+                0x00004d06                memset
  .text.avr-libc
-                0x000041e4        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcpy.o)
-                0x000041e4                strcpy
+                0x00004d14        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strcpy.o)
+                0x00004d14                strcpy
  .text.avr-libc
-                0x000041f2       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
-                0x000041f2                __itoa_ncheck
+                0x00004d22       0x14 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(itoa_ncheck.o)
+                0x00004d22                __itoa_ncheck
  .text.avr-libc
-                0x00004206       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa_ncheck.o)
-                0x00004206                __utoa_ncheck
-                0x00004208                __utoa_common
+                0x00004d36       0x32 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(utoa_ncheck.o)
+                0x00004d36                __utoa_ncheck
+                0x00004d38                __utoa_common
  .text.avr-libc
-                0x00004238       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strrev.o)
-                0x00004238                strrev
-                0x00004258                . = ALIGN (0x2)
+                0x00004d68       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(strrev.o)
+                0x00004d68                strrev
+                0x00004d88                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00004258        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
-                0x00004258                _exit
-                0x00004258                exit
+ .fini9         0x00004d88        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+                0x00004d88                _exit
+                0x00004d88                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
  *(.fini7)
  *(.fini7)
  *(.fini6)
- .fini6         0x00004258       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_dtors.o)
-                0x00004258                __do_global_dtors
+ .fini6         0x00004d88       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_dtors.o)
+                0x00004d88                __do_global_dtors
  *(.fini6)
  *(.fini5)
  *(.fini5)
@@ -2490,11 +2533,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00004276        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
+ .fini0         0x00004da6        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr6\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000427a                _etext = .
+                0x00004daa                _etext = .
 
-.data           0x00800200       0x9a load address 0x0000427a
+.data           0x00800200       0xac load address 0x00004daa
                 0x00800200                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800200        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
@@ -2505,145 +2548,157 @@ END GROUP
  .data.delay2Sec
                 0x00800206        0x2 main.o
                 0x00800206                delay2Sec
+ .data.intFunc  0x00800208       0x10 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800208        0x7 main.o
+                0x00800218        0x9 main.o
+                                  0xa (size before relaxing)
  .rodata._ZTV12Adafruit_GFX
-                0x0080020f       0x2c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
-                0x0080020f                _ZTV12Adafruit_GFX
+                0x00800221       0x2c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x00800221                _ZTV12Adafruit_GFX
  .rodata._ZTV16Adafruit_SSD1306
-                0x0080023b       0x2c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
-                0x0080023b                _ZTV16Adafruit_SSD1306
+                0x0080024d       0x2c src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x0080024d                _ZTV16Adafruit_SSD1306
  .rodata._ZTV7TwoWire
-                0x00800267       0x12 src/libraries/Wire/src/Wire.o
-                0x00800267                _ZTV7TwoWire
+                0x00800279       0x12 src/libraries/Wire/src/Wire.o
+                0x00800279                _ZTV7TwoWire
  .rodata._ZTV14HardwareSerial
-                0x00800279       0x12 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00800279                _ZTV14HardwareSerial
+                0x0080028b       0x12 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x0080028b                _ZTV14HardwareSerial
  .rodata.str1.1
-                0x0080028b        0xf C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x0080029d        0xf C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  *(.gnu.linkonce.r*)
-                0x0080029a                . = ALIGN (0x2)
-                0x0080029a                _edata = .
-                0x0080029a                PROVIDE (__data_end, .)
+                0x008002ac                . = ALIGN (0x2)
+                0x008002ac                _edata = .
+                0x008002ac                PROVIDE (__data_end, .)
 
-.bss            0x0080029a      0x1bd
-                0x0080029a                PROVIDE (__bss_start, .)
+.bss            0x008002ac      0x1dd
+                0x008002ac                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
+ .bss.previousMillis10
+                0x008002ac        0x4 main.o
+                0x008002ac                previousMillis10
  .bss.previousMillis2
-                0x0080029a        0x4 main.o
-                0x0080029a                previousMillis2
- .bss.showTime  0x0080029e        0x1 main.o
-                0x0080029e                showTime
- .bss.display   0x0080029f       0x40 main.o
-                0x0080029f                display
+                0x008002b0        0x4 main.o
+                0x008002b0                previousMillis2
+ .bss.previousMillis1
+                0x008002b4        0x4 main.o
+                0x008002b4                previousMillis1
+ .bss.showTime  0x008002b8        0x1 main.o
+                0x008002b8                showTime
+ .bss.dt        0x008002b9        0xc main.o
+                0x008002b9                dt
+ .bss.clock     0x008002c5        0xc main.o
+                0x008002c5                clock
+ .bss.display   0x008002d1       0x40 main.o
+                0x008002d1                display
  .bss._ZN8SPIClass13interruptSaveE
-                0x008002df        0x1 src/libraries/SPI/src/SPI.o
-                0x008002df                _ZN8SPIClass13interruptSaveE
+                0x00800311        0x1 src/libraries/SPI/src/SPI.o
+                0x00800311                _ZN8SPIClass13interruptSaveE
  .bss._ZN8SPIClass13interruptMaskE
-                0x008002e0        0x1 src/libraries/SPI/src/SPI.o
-                0x008002e0                _ZN8SPIClass13interruptMaskE
+                0x00800312        0x1 src/libraries/SPI/src/SPI.o
+                0x00800312                _ZN8SPIClass13interruptMaskE
  .bss._ZN8SPIClass13interruptModeE
-                0x008002e1        0x1 src/libraries/SPI/src/SPI.o
-                0x008002e1                _ZN8SPIClass13interruptModeE
+                0x00800313        0x1 src/libraries/SPI/src/SPI.o
+                0x00800313                _ZN8SPIClass13interruptModeE
  .bss._ZN8SPIClass11initializedE
-                0x008002e2        0x1 src/libraries/SPI/src/SPI.o
-                0x008002e2                _ZN8SPIClass11initializedE
+                0x00800314        0x1 src/libraries/SPI/src/SPI.o
+                0x00800314                _ZN8SPIClass11initializedE
  .bss.twi_error
-                0x008002e3        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800315        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_rxBufferIndex
-                0x008002e4        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800316        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_rxBuffer
-                0x008002e5       0x20 src/libraries/Wire/src/utility/twi.o
+                0x00800317       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBufferLength
-                0x00800305        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800337        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBufferIndex
-                0x00800306        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800338        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBuffer
-                0x00800307       0x20 src/libraries/Wire/src/utility/twi.o
+                0x00800339       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBufferLength
-                0x00800327        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800359        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBufferIndex
-                0x00800328        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080035a        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBuffer
-                0x00800329       0x20 src/libraries/Wire/src/utility/twi.o
+                0x0080035b       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_onSlaveReceive
-                0x00800349        0x2 src/libraries/Wire/src/utility/twi.o
+                0x0080037b        0x2 src/libraries/Wire/src/utility/twi.o
  .bss.twi_onSlaveTransmit
-                0x0080034b        0x2 src/libraries/Wire/src/utility/twi.o
+                0x0080037d        0x2 src/libraries/Wire/src/utility/twi.o
  .bss.twi_do_reset_on_timeout
-                0x0080034d        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080037f        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_timed_out_flag
-                0x0080034e        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800380        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_timeout_us
-                0x0080034f        0x4 src/libraries/Wire/src/utility/twi.o
+                0x00800381        0x4 src/libraries/Wire/src/utility/twi.o
  .bss.twi_inRepStart
-                0x00800353        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800385        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_sendStop
-                0x00800354        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800386        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_slarw
-                0x00800355        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800387        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_state
-                0x00800356        0x1 src/libraries/Wire/src/utility/twi.o
- .bss.Wire      0x00800357        0xc src/libraries/Wire/src/Wire.o
-                0x00800357                Wire
+                0x00800388        0x1 src/libraries/Wire/src/utility/twi.o
+ .bss.Wire      0x00800389        0xc src/libraries/Wire/src/Wire.o
+                0x00800389                Wire
  .bss._ZN7TwoWire14user_onReceiveE
-                0x00800363        0x2 src/libraries/Wire/src/Wire.o
-                0x00800363                _ZN7TwoWire14user_onReceiveE
+                0x00800395        0x2 src/libraries/Wire/src/Wire.o
+                0x00800395                _ZN7TwoWire14user_onReceiveE
  .bss._ZN7TwoWire14user_onRequestE
-                0x00800365        0x2 src/libraries/Wire/src/Wire.o
-                0x00800365                _ZN7TwoWire14user_onRequestE
+                0x00800397        0x2 src/libraries/Wire/src/Wire.o
+                0x00800397                _ZN7TwoWire14user_onRequestE
  .bss._ZN7TwoWire12transmittingE
-                0x00800367        0x1 src/libraries/Wire/src/Wire.o
-                0x00800367                _ZN7TwoWire12transmittingE
+                0x00800399        0x1 src/libraries/Wire/src/Wire.o
+                0x00800399                _ZN7TwoWire12transmittingE
  .bss._ZN7TwoWire14txBufferLengthE
-                0x00800368        0x1 src/libraries/Wire/src/Wire.o
-                0x00800368                _ZN7TwoWire14txBufferLengthE
+                0x0080039a        0x1 src/libraries/Wire/src/Wire.o
+                0x0080039a                _ZN7TwoWire14txBufferLengthE
  .bss._ZN7TwoWire13txBufferIndexE
-                0x00800369        0x1 src/libraries/Wire/src/Wire.o
-                0x00800369                _ZN7TwoWire13txBufferIndexE
+                0x0080039b        0x1 src/libraries/Wire/src/Wire.o
+                0x0080039b                _ZN7TwoWire13txBufferIndexE
  .bss._ZN7TwoWire8txBufferE
-                0x0080036a       0x20 src/libraries/Wire/src/Wire.o
-                0x0080036a                _ZN7TwoWire8txBufferE
+                0x0080039c       0x20 src/libraries/Wire/src/Wire.o
+                0x0080039c                _ZN7TwoWire8txBufferE
  .bss._ZN7TwoWire9txAddressE
-                0x0080038a        0x1 src/libraries/Wire/src/Wire.o
-                0x0080038a                _ZN7TwoWire9txAddressE
+                0x008003bc        0x1 src/libraries/Wire/src/Wire.o
+                0x008003bc                _ZN7TwoWire9txAddressE
  .bss._ZN7TwoWire14rxBufferLengthE
-                0x0080038b        0x1 src/libraries/Wire/src/Wire.o
-                0x0080038b                _ZN7TwoWire14rxBufferLengthE
+                0x008003bd        0x1 src/libraries/Wire/src/Wire.o
+                0x008003bd                _ZN7TwoWire14rxBufferLengthE
  .bss._ZN7TwoWire13rxBufferIndexE
-                0x0080038c        0x1 src/libraries/Wire/src/Wire.o
-                0x0080038c                _ZN7TwoWire13rxBufferIndexE
+                0x008003be        0x1 src/libraries/Wire/src/Wire.o
+                0x008003be                _ZN7TwoWire13rxBufferIndexE
  .bss._ZN7TwoWire8rxBufferE
-                0x0080038d       0x20 src/libraries/Wire/src/Wire.o
-                0x0080038d                _ZN7TwoWire8rxBufferE
- .bss.Serial    0x008003ad       0x9d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x008003ad                Serial
+                0x008003bf       0x20 src/libraries/Wire/src/Wire.o
+                0x008003bf                _ZN7TwoWire8rxBufferE
+ .bss.Serial    0x008003df       0x9d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x008003df                Serial
  .bss.timer0_fract
-                0x0080044a        0x1 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x0080047c        0x1 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
  .bss.timer0_millis
-                0x0080044b        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x0080044b                timer0_millis
+                0x0080047d        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x0080047d                timer0_millis
  .bss.timer0_overflow_count
-                0x0080044f        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
-                0x0080044f                timer0_overflow_count
+                0x00800481        0x4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00800481                timer0_overflow_count
  *(COMMON)
- COMMON         0x00800453        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
-                0x00800453                __brkval
-                0x00800455                __flp
-                0x00800457                PROVIDE (__bss_end, .)
-                0x0000427a                __data_load_start = LOADADDR (.data)
-                0x00004314                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800485        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr6\libc.a(malloc.o)
+                0x00800485                __brkval
+                0x00800487                __flp
+                0x00800489                PROVIDE (__bss_end, .)
+                0x00004daa                __data_load_start = LOADADDR (.data)
+                0x00004e56                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800457        0x0
+.noinit         0x00800489        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800457                _end = .
-                0x00800457                PROVIDE (__heap_start, .)
+                0x00800489                _end = .
+                0x00800489                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -2684,8 +2739,9 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 main.o
+ .comment       0x00000000       0x30 DS3231/DS3231.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 main.o
  .comment       0x00000030       0x31 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
  .comment       0x00000030       0x31 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
  .comment       0x00000030       0x31 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
@@ -2697,6 +2753,7 @@ END GROUP
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
  .comment       0x00000030       0x31 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
@@ -2724,174 +2781,192 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xbf8
+.debug_aranges  0x00000000      0xe18
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x38 main.o
+                0x00000000      0x1a0 DS3231/DS3231.o
  .debug_aranges
-                0x00000038       0x98 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+                0x000001a0       0x48 main.o
  .debug_aranges
-                0x000000d0      0x2d8 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+                0x000001e8       0x98 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
  .debug_aranges
-                0x000003a8      0x118 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+                0x00000280      0x2d8 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
  .debug_aranges
-                0x000004c0       0x38 src/libraries/SPI/src/SPI.o
+                0x00000558      0x118 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
  .debug_aranges
-                0x000004f8       0x98 src/libraries/Wire/src/utility/twi.o
+                0x00000670       0x38 src/libraries/SPI/src/SPI.o
  .debug_aranges
-                0x00000590      0x110 src/libraries/Wire/src/Wire.o
+                0x000006a8       0x98 src/libraries/Wire/src/utility/twi.o
  .debug_aranges
-                0x000006a0       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+                0x00000740      0x110 src/libraries/Wire/src/Wire.o
  .debug_aranges
-                0x000006c0       0x68 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00000850       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
  .debug_aranges
-                0x00000728       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00000870       0x68 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
  .debug_aranges
-                0x00000770       0x30 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+                0x000008d8       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
  .debug_aranges
-                0x000007a0      0x100 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+                0x00000920       0x30 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
  .debug_aranges
-                0x000008a0       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+                0x00000950      0x100 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
  .debug_aranges
-                0x000008e8       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000a50       0x70 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
  .debug_aranges
-                0x00000920      0x2b8 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+                0x00000ac0       0x48 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
  .debug_aranges
-                0x00000bd8       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+                0x00000b08       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_aranges
+                0x00000b40      0x2b8 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_aranges
+                0x00000df8       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1e38d
+.debug_info     0x00000000    0x21e3e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0xbbc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_info    0x00000bbc     0x1c0f main.o
- .debug_info    0x000027cb     0x182f src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_info    0x00003ffa     0x87f2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_info    0x0000c7ec     0x2d77 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_info    0x0000f563      0x6cd src/libraries/SPI/src/SPI.o
- .debug_info    0x0000fc30      0x93a src/libraries/Wire/src/utility/twi.o
- .debug_info    0x0001056a     0x2910 src/libraries/Wire/src/Wire.o
- .debug_info    0x00012e7a       0x76 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_info    0x00012ef0     0x205e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_info    0x00014f4e     0x1b74 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_info    0x00016ac2      0x295 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_info    0x00016d57     0x295d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_info    0x000196b4      0x329 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_info    0x000199dd      0x63a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_info    0x0001a017     0x4338 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_info    0x0001e34f       0x3e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_info    0x00000bbc     0x2c16 DS3231/DS3231.o
+ .debug_info    0x000037d2     0x27a9 main.o
+ .debug_info    0x00005f7b     0x182f src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_info    0x000077aa     0x87f2 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_info    0x0000ff9c     0x2d77 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_info    0x00012d13      0x6cd src/libraries/SPI/src/SPI.o
+ .debug_info    0x000133e0      0x93a src/libraries/Wire/src/utility/twi.o
+ .debug_info    0x00013d1a     0x2910 src/libraries/Wire/src/Wire.o
+ .debug_info    0x0001662a       0x76 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_info    0x000166a0     0x205e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_info    0x000186fe     0x1b74 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_info    0x0001a272      0x295 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_info    0x0001a507     0x295d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_info    0x0001ce64      0x301 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_info    0x0001d165      0x329 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_info    0x0001d48e      0x63a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_info    0x0001dac8     0x4338 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_info    0x00021e00       0x3e C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
-.debug_abbrev   0x00000000     0x4164
+.debug_abbrev   0x00000000     0x4756
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0xb1a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_abbrev  0x00000b1a      0x44a main.o
- .debug_abbrev  0x00000f64      0x435 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_abbrev  0x00001399      0x6d8 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_abbrev  0x00001a71      0x5f6 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_abbrev  0x00002067      0x283 src/libraries/SPI/src/SPI.o
- .debug_abbrev  0x000022ea      0x2f2 src/libraries/Wire/src/utility/twi.o
- .debug_abbrev  0x000025dc      0x563 src/libraries/Wire/src/Wire.o
- .debug_abbrev  0x00002b3f       0x6d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_abbrev  0x00002bac      0x4b7 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_abbrev  0x00003063      0x3ce C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_abbrev  0x00003431      0x12d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_abbrev  0x0000355e      0x47a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_abbrev  0x000039d8      0x146 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_abbrev  0x00003b1e      0x15a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_abbrev  0x00003c78      0x4c2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_abbrev  0x0000413a       0x2a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_abbrev  0x00000b1a      0x44e DS3231/DS3231.o
+ .debug_abbrev  0x00000f68      0x501 main.o
+ .debug_abbrev  0x00001469      0x435 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_abbrev  0x0000189e      0x6d8 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_abbrev  0x00001f76      0x5f6 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_abbrev  0x0000256c      0x283 src/libraries/SPI/src/SPI.o
+ .debug_abbrev  0x000027ef      0x2f2 src/libraries/Wire/src/utility/twi.o
+ .debug_abbrev  0x00002ae1      0x563 src/libraries/Wire/src/Wire.o
+ .debug_abbrev  0x00003044       0x6d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_abbrev  0x000030b1      0x4b7 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_abbrev  0x00003568      0x3ce C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_abbrev  0x00003936      0x12d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_abbrev  0x00003a63      0x47a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_abbrev  0x00003edd       0xed C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_abbrev  0x00003fca      0x146 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_abbrev  0x00004110      0x15a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_abbrev  0x0000426a      0x4c2 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_abbrev  0x0000472c       0x2a C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
-.debug_line     0x00000000     0x7fa4
+.debug_line     0x00000000     0x92a4
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x1fa C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_line    0x000001fa      0x3c1 main.o
- .debug_line    0x000005bb      0x79b src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_line    0x00000d56     0x2605 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_line    0x0000335b     0x12de src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_line    0x00004639      0x313 src/libraries/SPI/src/SPI.o
- .debug_line    0x0000494c      0x6db src/libraries/Wire/src/utility/twi.o
- .debug_line    0x00005027      0x653 src/libraries/Wire/src/Wire.o
- .debug_line    0x0000567a       0xa9 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_line    0x00005723      0x527 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_line    0x00005c4a      0x288 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_line    0x00005ed2      0x161 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_line    0x00006033      0x681 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_line    0x000066b4      0x2cb C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_line    0x0000697f      0x284 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_line    0x00006c03     0x1360 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_line    0x00007f63       0x41 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_line    0x000001fa      0xf7b DS3231/DS3231.o
+ .debug_line    0x00001175      0x46c main.o
+ .debug_line    0x000015e1      0x79b src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_line    0x00001d7c     0x2605 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_line    0x00004381     0x12de src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_line    0x0000565f      0x313 src/libraries/SPI/src/SPI.o
+ .debug_line    0x00005972      0x6db src/libraries/Wire/src/utility/twi.o
+ .debug_line    0x0000604d      0x653 src/libraries/Wire/src/Wire.o
+ .debug_line    0x000066a0       0xa9 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_line    0x00006749      0x527 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_line    0x00006c70      0x288 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_line    0x00006ef8      0x161 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_line    0x00007059      0x681 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_line    0x000076da      0x2da C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_line    0x000079b4      0x2cb C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_line    0x00007c7f      0x284 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_line    0x00007f03     0x1360 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_line    0x00009263       0x41 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
-.debug_frame    0x00000000     0x333c
+.debug_frame    0x00000000     0x3d7c
  *(.debug_frame)
- .debug_frame   0x00000000       0xa8 main.o
- .debug_frame   0x000000a8      0x2c4 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_frame   0x0000036c     0x143c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_frame   0x000017a8      0x498 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_frame   0x00001c40       0x5c src/libraries/SPI/src/SPI.o
- .debug_frame   0x00001c9c      0x208 src/libraries/Wire/src/utility/twi.o
- .debug_frame   0x00001ea4      0x2b0 src/libraries/Wire/src/Wire.o
- .debug_frame   0x00002154       0x34 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_frame   0x00002188      0x110 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_frame   0x00002298       0xe0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_frame   0x00002378       0x54 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_frame   0x000023cc      0x3ac C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_frame   0x00002778       0xc4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_frame   0x0000283c       0x7c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_frame   0x000028b8      0xa60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_frame   0x00003318       0x24 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_frame   0x00000000      0x6ec DS3231/DS3231.o
+ .debug_frame   0x000006ec       0xf8 main.o
+ .debug_frame   0x000007e4      0x2c4 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_frame   0x00000aa8     0x143c src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_frame   0x00001ee4      0x498 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_frame   0x0000237c       0x5c src/libraries/SPI/src/SPI.o
+ .debug_frame   0x000023d8      0x208 src/libraries/Wire/src/utility/twi.o
+ .debug_frame   0x000025e0      0x2b0 src/libraries/Wire/src/Wire.o
+ .debug_frame   0x00002890       0x34 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_frame   0x000028c4      0x110 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_frame   0x000029d4       0xe0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_frame   0x00002ab4       0x54 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_frame   0x00002b08      0x3ac C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_frame   0x00002eb4      0x304 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_frame   0x000031b8       0xc4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_frame   0x0000327c       0x7c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_frame   0x000032f8      0xa60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_frame   0x00003d58       0x24 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
-.debug_str      0x00000000     0x5599
+.debug_str      0x00000000     0x5f76
  *(.debug_str)
  .debug_str     0x00000000      0x3e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.6.364/gcc/dev/atmega2560/avr6/crtatmega2560.o
- .debug_str     0x000003e6     0x132b main.o
-                               0x143c (size before relaxing)
- .debug_str     0x00001711      0x560 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_str     0x000003e6      0xc45 DS3231/DS3231.o
+                                0xd2b (size before relaxing)
+ .debug_str     0x0000102b     0x1134 main.o
+                               0x1d09 (size before relaxing)
+ .debug_str     0x0000215f      0x546 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
                                 0xbad (size before relaxing)
- .debug_str     0x00001c71     0x15e4 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_str     0x000026a5     0x15e4 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
                                0x2572 (size before relaxing)
- .debug_str     0x00003255      0x817 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_str     0x00003c89      0x7a1 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
                                0x1115 (size before relaxing)
- .debug_str     0x00003a6c       0xb9 src/libraries/SPI/src/SPI.o
+ .debug_str     0x0000442a       0xb9 src/libraries/SPI/src/SPI.o
                                 0x6cb (size before relaxing)
- .debug_str     0x00003b25      0x3d8 src/libraries/Wire/src/utility/twi.o
+ .debug_str     0x000044e3      0x3d8 src/libraries/Wire/src/utility/twi.o
                                 0x517 (size before relaxing)
- .debug_str     0x00003efd      0x92e src/libraries/Wire/src/Wire.o
+ .debug_str     0x000048bb      0x8b3 src/libraries/Wire/src/Wire.o
                                0x19c3 (size before relaxing)
- .debug_str     0x0000482b       0x97 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_str     0x0000516e       0x97 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
                                 0x1b8 (size before relaxing)
- .debug_str     0x000048c2      0x482 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_str     0x00005205      0x482 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
                                0x1707 (size before relaxing)
- .debug_str     0x00004d44       0x47 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_str     0x00005687       0x47 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
                                0x1422 (size before relaxing)
- .debug_str     0x00004d8b       0x37 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_str     0x000056ce       0x37 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
                                 0x2ce (size before relaxing)
- .debug_str     0x00004dc2      0x334 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_str     0x00005705      0x334 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
                                0x125c (size before relaxing)
- .debug_str     0x000050f6       0x60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_str     0x00005a39       0xa4 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+                                0x293 (size before relaxing)
+ .debug_str     0x00005add       0x60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
                                 0x264 (size before relaxing)
- .debug_str     0x00005156       0x58 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_str     0x00005b3d       0x53 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
                                 0x2c9 (size before relaxing)
- .debug_str     0x000051ae      0x3cf C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_str     0x00005b90      0x3ca C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
                                0x11af (size before relaxing)
- .debug_str     0x0000557d       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_str     0x00005f5a       0x1c C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
                                 0x159 (size before relaxing)
 
-.debug_loc      0x00000000    0x18f62
+.debug_loc      0x00000000    0x1c59d
  *(.debug_loc)
- .debug_loc     0x00000000      0x1d8 main.o
- .debug_loc     0x000001d8     0x1584 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_loc     0x0000175c     0xc203 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_loc     0x0000d95f     0x3191 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_loc     0x00010af0      0x1f0 src/libraries/SPI/src/SPI.o
- .debug_loc     0x00010ce0      0x87f src/libraries/Wire/src/utility/twi.o
- .debug_loc     0x0001155f      0xcbb src/libraries/Wire/src/Wire.o
- .debug_loc     0x0001221a      0x4dc C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_loc     0x000126f6      0x1b0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_loc     0x000128a6     0x1c87 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_loc     0x0001452d      0x28d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_loc     0x000147ba      0x56b C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_loc     0x00014d25     0x423d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_loc     0x00000000     0x2cc8 DS3231/DS3231.o
+ .debug_loc     0x00002cc8      0x356 main.o
+ .debug_loc     0x0000301e     0x1584 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_loc     0x000045a2     0xc203 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_loc     0x000107a5     0x3191 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_loc     0x00013936      0x1f0 src/libraries/SPI/src/SPI.o
+ .debug_loc     0x00013b26      0x87f src/libraries/Wire/src/utility/twi.o
+ .debug_loc     0x000143a5      0xcbb src/libraries/Wire/src/Wire.o
+ .debug_loc     0x00015060      0x4dc C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_loc     0x0001553c      0x1b0 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_loc     0x000156ec     0x1c87 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_loc     0x00017373      0x7f5 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_loc     0x00017b68      0x28d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_loc     0x00017df5      0x56b C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_loc     0x00018360     0x423d C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2911,24 +2986,26 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0xe58
+.debug_ranges   0x00000000     0x1070
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x28 main.o
- .debug_ranges  0x00000028       0xc0 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
- .debug_ranges  0x000000e8      0x4c0 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
- .debug_ranges  0x000005a8      0x1b8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
- .debug_ranges  0x00000760       0x28 src/libraries/SPI/src/SPI.o
- .debug_ranges  0x00000788       0x88 src/libraries/Wire/src/utility/twi.o
- .debug_ranges  0x00000810      0x100 src/libraries/Wire/src/Wire.o
- .debug_ranges  0x00000910       0x10 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
- .debug_ranges  0x00000920       0x58 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_ranges  0x00000978       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_ranges  0x000009b0       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
- .debug_ranges  0x000009d0      0x120 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
- .debug_ranges  0x00000af0       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
- .debug_ranges  0x00000b28       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_ranges  0x00000b50      0x2f8 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
- .debug_ranges  0x00000e48       0x10 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
+ .debug_ranges  0x00000000      0x1a8 DS3231/DS3231.o
+ .debug_ranges  0x000001a8       0x38 main.o
+ .debug_ranges  0x000001e0       0xc0 src/libraries/Adafruit_BusIO/Adafruit_SPIDevice.o
+ .debug_ranges  0x000002a0      0x4c0 src/libraries/Adafruit_GFX_Library/Adafruit_GFX.o
+ .debug_ranges  0x00000760      0x1b8 src/libraries/Adafruit_SSD1306/Adafruit_SSD1306.o
+ .debug_ranges  0x00000918       0x28 src/libraries/SPI/src/SPI.o
+ .debug_ranges  0x00000940       0x88 src/libraries/Wire/src/utility/twi.o
+ .debug_ranges  0x000009c8      0x100 src/libraries/Wire/src/Wire.o
+ .debug_ranges  0x00000ac8       0x10 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(abi.o)
+ .debug_ranges  0x00000ad8       0x58 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_ranges  0x00000b30       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_ranges  0x00000b68       0x20 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(main.o)
+ .debug_ranges  0x00000b88      0x120 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(Print.o)
+ .debug_ranges  0x00000ca8       0x60 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WInterrupts.o)
+ .debug_ranges  0x00000d08       0x38 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring.o)
+ .debug_ranges  0x00000d40       0x28 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_ranges  0x00000d68      0x2f8 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(WString.o)
+ .debug_ranges  0x00001060       0x10 C:\Users\alla1862\DOCUME~1\GitHub\DET_IN~1\MEGA25~1\MEGA25~1\ARDUIN~1\Debug\libArduinoCore.a(hooks.o)
 
 .debug_macro
  *(.debug_macro)

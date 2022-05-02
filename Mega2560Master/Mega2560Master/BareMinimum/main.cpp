@@ -3,6 +3,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include <DS3231.h>
 
 // Display
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
@@ -14,24 +15,37 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 
 // clock
-
+DS3231 clock;
+RTCDateTime dt;
 bool showTime = false;
 
+
 // delays
+unsigned long previousMillis1 = 0;
 unsigned long previousMillis2 = 0;
+unsigned long previousMillis10 = 0;
 int delay2Sec = 2000;
+
+// funktion prodotyping
+String printTime(void);
+void buttonSwich(void);
 
 void setup (void)
 {
 	Serial.begin(115200);												//set baud rate to 115200 for usart
 	SPI.beginTransaction(SPISettings(4000000, MSBFIRST, SPI_MODE0));	// Set configuration for SPI
-	SPI.begin();														// Initializes the SPI bus by setting SCK, MOSI, and SS to outputs, pulling SCK and MOSI low, and SS high.
+	SPI.begin();
+	
+	clock.begin();														// Initializes the SPI bus by setting SCK, MOSI, and SS to outputs, pulling SCK and MOSI low, and SS high.
 	
 	if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C))
 	{ // Address for 128x64
 		Serial.println(F("SSD1306 allocation failed"));
 		for(;;); // Don't proceed, loop forever
 	}
+	
+	pinMode(3, INPUT_PULLUP);
+	attachInterrupt(digitalPinToInterrupt(3), buttonSwich, CHANGE);
 }
 
 void loop (void)
@@ -43,6 +57,7 @@ void loop (void)
 	display.setCursor(0,0);			// Start at top-left corner
 	if (showTime)
 	{
+		display.println(printTime());
 	}
 	else
 	{
@@ -67,4 +82,31 @@ void loop (void)
 	}
 	
 	display.display();
+}
+
+String printTime()
+{
+	if (millis() - previousMillis1 >= (delay2Sec/2))
+	{
+		previousMillis1 = millis();
+		dt = clock.getDateTime();
+	}
+	if (millis() - previousMillis10 >= (delay2Sec*5))
+	{
+		showTime = false;
+	}
+	
+	String dsTime = "";			// dsTime = Display Show Time
+	dsTime += dt.hour;
+	dsTime += ":";
+	dsTime += dt.minute;
+	dsTime += ":";
+	dsTime += dt.second;
+	
+	return dsTime;
+}
+
+void buttonSwich()
+{
+	showTime = true;
 }
