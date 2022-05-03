@@ -35,3 +35,42 @@ Test af will.
 * WiFiNINA
 * ThingSpeak
 * SercomSPISlave
+
+## Analyse SPI
+![image](Billeder/Analyser.PNG)
+
+## Setup
+### MRKWiFi1010
+#### SPI
+* Put MISO kablet i pin 10
+* Put SCK kablet i pin 9
+* Put MOSI kablet i pin 8
+* Put SS kablet i pin 7
+* Begge bords skal have samme ground
+Husk level converter
+
+### Mega2560
+#### SPI
+* Put MISO kablet i pin 50
+* Put SCK kablet i pin 52
+* Put MOSI kablet i pin 51
+* Put SS kablet i pin 53
+* Begge bords skal have samme ground
+Husk level converter
+#### Display
+* SDA kablet til SDA pin
+* SCL kablet til SCL pin
+* VCC til 5v
+* GND til ground
+#### Clock
+* SDA kablet til SDA pin
+* SCL kablet til SCL pin
+* VCC til 5v
+* GND til ground
+#### DHT11
+* Signal til pin 2
+* VCC til 5v
+* GND til ground
+#### Knap
+* Et ben til ground
+* Modsvarende ben til pin 3
