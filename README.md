@@ -7,7 +7,7 @@ Mega2560 printer så temperaturen ud til displayed så man kan se temperaturen.
 
 Du kan trykke på en knap så du kan se hvad klokken er istedet for temperaturen som skrifter tilbage efter 10 sekunder.
 
-hvis der er tid.
+Version 2.0
 Der kan også læses et kort som hvis matcher åbner en dør.
 ekstra mkrwifi1010 med DHT11 simulering af indørs og udendørs.
 Test af retain.
@@ -34,7 +34,7 @@ Test af will.
 * Arduino
 * WiFiNINA
 * ThingSpeak
-* SercomSPISlave
+* SercomSPISlave (Har lavet en port om for Sercom1, så den bruger PA21(pin 7, SS) istedfor PA18 som ikke eksitere på borded jeg brugere.)
 
 ## Analyse SPI
 ![image](Billeder/Analyser.PNG)
