@@ -1,16 +1,14 @@
 # Det_Intiligente_Hus
 ### Project beskrivelse
-Meaga2560 har en DHT11, Display og en clock.
-Mega2560 sættes op som master og bruger spi til at sende humidity og temperaturen til MKRWiFi1010 som getmmer temperatur og humidity i thingspeak.
-
-Mega2560 printer så temperaturen ud til displayed så man kan se temperaturen.
-
+Meaga2560 har en DHT11, Display og en clock.<br/>
+Mega2560 sættes op som master og bruger spi til at sende humidity og temperaturen til MKRWiFi1010 som getmmer temperatur og humidity i thingspeak.<br/>
+Mega2560 printer så temperaturen ud til displayed så man kan se temperaturen.<br/>
 Du kan trykke på en knap så du kan se hvad klokken er istedet for temperaturen som skrifter tilbage efter 10 sekunder.
 
-Version 2.0
-Der kan også læses et kort som hvis matcher åbner en dør.
-ekstra mkrwifi1010 med DHT11 simulering af indørs og udendørs.
-Test af retain.
+#### Version 2.0
+Der kan også læses et kort som hvis matcher åbner en dør.<br/>
+ekstra mkrwifi1010 med DHT11 simulering af indørs og udendørs.<br/>
+Test af retain.<br/>
 Test af will.
 
 ## Flowchart
