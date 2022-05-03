@@ -26,6 +26,12 @@ src\libraries\Adafruit_GFX_Library\glcdfont.c
 
 src\libraries\Adafruit_SSD1306\Adafruit_SSD1306.cpp
 
+src\libraries\Adafruit_Unified_Sensor\Adafruit_Sensor.cpp
+
+src\libraries\DHT_sensor_library\DHT.cpp
+
+src\libraries\DHT_sensor_library\DHT_U.cpp
+
 src\libraries\SPI\src\SPI.cpp
 
 src\libraries\Wire\src\utility\twi.c

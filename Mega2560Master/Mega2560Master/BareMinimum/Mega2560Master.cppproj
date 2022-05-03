@@ -84,6 +84,8 @@
       <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
       <Value>..\include\libraries\Adafruit_SSD1306</Value>
       <Value>..\include\libraries\Adafruit_BusIO</Value>
+      <Value>..\include\libraries\DHT_sensor_library</Value>
+      <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -120,6 +122,8 @@
       <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
       <Value>..\include\libraries\Adafruit_SSD1306</Value>
       <Value>..\include\libraries\Adafruit_BusIO</Value>
+      <Value>..\include\libraries\DHT_sensor_library</Value>
+      <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -181,6 +185,8 @@
       <Value>..\include\libraries\Adafruit_GFX_Library\Fonts</Value>
       <Value>..\include\libraries\Adafruit_SSD1306</Value>
       <Value>..\include\libraries\Adafruit_BusIO</Value>
+      <Value>..\include\libraries\DHT_sensor_library</Value>
+      <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -218,6 +224,8 @@
       <Value>..\include\libraries\Adafruit_SSD1306</Value>
       <Value>../DS3231</Value>
       <Value>..\include\libraries\Adafruit_BusIO</Value>
+      <Value>..\include\libraries\DHT_sensor_library</Value>
+      <Value>..\include\libraries\Adafruit_Unified_Sensor</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -441,6 +449,15 @@
     <Compile Include="include\libraries\Adafruit_SSD1306\splash.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\libraries\Adafruit_Unified_Sensor\Adafruit_Sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\DHT_sensor_library\DHT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\DHT_sensor_library\DHT_U.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\libraries\SPI\src\SPI.h">
       <SubType>compile</SubType>
     </Compile>
@@ -483,6 +500,15 @@
     <Compile Include="src\libraries\Adafruit_SSD1306\Adafruit_SSD1306.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\libraries\Adafruit_Unified_Sensor\Adafruit_Sensor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\DHT_sensor_library\DHT.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\DHT_sensor_library\DHT_U.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\libraries\SPI\src\SPI.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -511,6 +537,8 @@
     <Folder Include="include\libraries\Adafruit_GFX_Library\examples\GFXcanvas\" />
     <Folder Include="include\libraries\Adafruit_GFX_Library\Fonts\" />
     <Folder Include="include\libraries\Adafruit_SSD1306\" />
+    <Folder Include="include\libraries\Adafruit_Unified_Sensor\" />
+    <Folder Include="include\libraries\DHT_sensor_library\" />
     <Folder Include="include\libraries\SPI\" />
     <Folder Include="include\libraries\SPI\src\" />
     <Folder Include="include\libraries\Wire\" />
@@ -525,6 +553,8 @@
     <Folder Include="src\libraries\Adafruit_GFX_Library\examples\GFXcanvas\" />
     <Folder Include="src\libraries\Adafruit_GFX_Library\fontconvert\" />
     <Folder Include="src\libraries\Adafruit_SSD1306\" />
+    <Folder Include="src\libraries\Adafruit_Unified_Sensor\" />
+    <Folder Include="src\libraries\DHT_sensor_library\" />
     <Folder Include="src\libraries\SPI\" />
     <Folder Include="src\libraries\SPI\src\" />
     <Folder Include="src\libraries\Wire\" />

@@ -4,6 +4,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <DS3231.h>
+#include <DHT.h>
 
 // Display
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
@@ -20,6 +21,17 @@ RTCDateTime dt;
 bool showTime = false;
 
 
+// DHT11
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+// DHT11 data
+int h = 0;
+int t = 0;
+
+
 // delays
 unsigned long previousMillis1 = 0;
 unsigned long previousMillis2 = 0;
@@ -29,8 +41,6 @@ int delay2Sec = 2000;
 // funktion prodotyping
 String printTime(void);
 void buttonSwich(void);
-
-int* temperature = 0;
 
 void setup (void)
 {
@@ -46,6 +56,10 @@ void setup (void)
 		for(;;); // Don't proceed, loop forever
 	}
 	
+	// DHT11
+	dht.begin();
+	
+	// interrupt for button
 	pinMode(3, INPUT_PULLUP);
 	attachInterrupt(digitalPinToInterrupt(3), buttonSwich, CHANGE);
 }
@@ -66,17 +80,24 @@ void loop (void)
 		if (millis() - previousMillis2 >= delay2Sec)
 		{
 			previousMillis2 = millis();
+			
+			h = round(dht.readHumidity());
+			t = round(dht.readTemperature());
+			
+			
+			byte data[] = {h+50, t+50, 255}; //255 is for data sorting on slave
+			
 			digitalWrite(SS, LOW);				// enable Slave Select
 			
-			
-			SPI.transfer(*temperature);
-			Serial.println(*temperature);
+			SPI.transfer(data[0]);
+			SPI.transfer(data[1]);
+			SPI.transfer(data[2]);
 			
 			digitalWrite(SS, HIGH);				// disable Slave Select
 		}
 		
 		String dstr = "Temp: ";					//dstr = Display show temperature rounded
-		dstr += *temperature;
+		dstr += t;
 		dstr += (char)247;
 		
 		display.println(dstr);
@@ -111,4 +132,5 @@ void buttonSwich()
 {
 	previousMillis10 = millis();
 	showTime = true;
+	Serial.println("Button pressed");
 }

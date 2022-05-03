@@ -1,0 +1,5 @@
+#define SECRET_SSID "SibirienAP"
+#define SECRET_PASS "Siberia51244"
+
+#define SECRET_CH_ID 1718632
+#define SECRET_WRITE_APIKEY "XTVHIUU0UMK3H9LE"

@@ -1,4 +1,9 @@
-main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
+src/libraries/DHT_sensor_library/DHT_U.d \
+ src/libraries/DHT_sensor_library/DHT_U.o: \
+ ../src/libraries/DHT_sensor_library/DHT_U.cpp \
+ ..\include\libraries\DHT_sensor_library/DHT_U.h \
+ ..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
+ ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
@@ -33,13 +38,12 @@ main.d main.o: .././main.cpp ..\\..\ArduinoCore\include\core/Arduino.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h \
- ..\include\libraries\SPI\src/SPI.h ..\include\libraries\Wire\src/Wire.h \
- ..\\..\ArduinoCore\include\core/Stream.h \
- ..\include\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
  ..\\..\ArduinoCore\include\core/Print.h \
- ..\include\libraries\Adafruit_GFX_Library/gfxfont.h \
- ..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h \
- ../DS3231/DS3231.h ..\include\libraries\DHT_sensor_library/DHT.h
+ ..\include\libraries\DHT_sensor_library/DHT.h
+
+..\include\libraries\DHT_sensor_library/DHT_U.h:
+
+..\include\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h:
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -111,20 +115,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ..\\..\ArduinoCore\include\variants\mega/pins_arduino.h:
 
-..\include\libraries\SPI\src/SPI.h:
-
-..\include\libraries\Wire\src/Wire.h:
-
-..\\..\ArduinoCore\include\core/Stream.h:
-
-..\include\libraries\Adafruit_GFX_Library/Adafruit_GFX.h:
-
 ..\\..\ArduinoCore\include\core/Print.h:
-
-..\include\libraries\Adafruit_GFX_Library/gfxfont.h:
-
-..\include\libraries\Adafruit_SSD1306/Adafruit_SSD1306.h:
-
-../DS3231/DS3231.h:
 
 ..\include\libraries\DHT_sensor_library/DHT.h:
