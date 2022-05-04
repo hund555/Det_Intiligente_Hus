@@ -47,7 +47,7 @@ Test af will.
 * Begge bords skal have samme ground
 Husk level converter
 
-### Mega2560
+### Mega2560 R3
 #### SPI
 * Put MISO kablet i pin 50
 * Put SCK kablet i pin 52
