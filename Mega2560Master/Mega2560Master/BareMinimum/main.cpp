@@ -5,6 +5,7 @@
 #include <Adafruit_SSD1306.h>
 #include <DS3231.h>
 #include <DHT.h>
+#include <MFRC522.h>
 
 // Display
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
@@ -19,6 +20,15 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 DS3231 clock;
 RTCDateTime dt;
 bool showTime = false;
+
+
+// MFRC522
+#define SS_PIN 49
+#define RST_PIN 5
+
+MFRC522 rfid(SS_PIN, RST_PIN); // Instance of the class
+
+MFRC522::MIFARE_Key key;
 
 
 // DHT11
@@ -41,6 +51,9 @@ int delay2Sec = 2000;
 // funktion prodotyping
 String printTime(void);
 void buttonSwich(void);
+void readDHT11();
+void sendSPI();
+void readCard();
 
 void setup (void)
 {
@@ -54,6 +67,12 @@ void setup (void)
 	{ // Address for 128x64
 		Serial.println(F("SSD1306 allocation failed"));
 		for(;;); // Don't proceed, loop forever
+	}
+	
+	// MFRC
+	rfid.PCD_Init();
+	for (byte i = 0; i < 6; i++) {
+		key.keyByte[i] = 0xFF;
 	}
 	
 	// DHT11
@@ -71,6 +90,8 @@ void loop (void)
 	display.setTextSize(2);			// Normal 1:1 pixel scale
 	display.setTextColor(WHITE);	// Draw white text
 	display.setCursor(0,0);			// Start at top-left corner
+	
+	readCard();
 	if (showTime)
 	{
 		display.println(printTime());
@@ -81,21 +102,11 @@ void loop (void)
 		{
 			previousMillis2 = millis();
 			
-			h = round(dht.readHumidity());
-			t = round(dht.readTemperature());
+			readDHT11();
 			
-			
-			byte data[] = {h+50, t+50, 255}; //255 is for data sorting on slave
-			
-			digitalWrite(SS, LOW);				// enable Slave Select
-			
-			SPI.transfer(data[0]);
-			SPI.transfer(data[1]);
-			SPI.transfer(data[2]);
-			
-			digitalWrite(SS, HIGH);				// disable Slave Select
+			sendSPI();
 		}
-		
+		// string som vises på display
 		String dstr = "Temp: ";					//dstr = Display show temperature rounded
 		dstr += t;
 		dstr += (char)247;
@@ -133,4 +144,39 @@ void buttonSwich()
 	previousMillis10 = millis();
 	showTime = true;
 	Serial.println("Button pressed");
+}
+
+void readDHT11()
+{
+	h = round(dht.readHumidity());
+	t = round(dht.readTemperature());
+}
+
+void sendSPI()
+{
+	byte data[] = {h+50, t+50, 255}; //255 is for data sorting on slave
+	
+	digitalWrite(SS, LOW);				// enable Slave Select
+	
+	SPI.transfer(data[0]);
+	SPI.transfer(data[1]);
+	SPI.transfer(data[2]);
+	
+	digitalWrite(SS, HIGH);				// disable Slave Select
+}
+
+void readCard()
+{
+	// Look for new cards
+	if ( ! rfid.PICC_IsNewCardPresent())
+	return;
+
+	// Verify if the NUID has been readed
+	if ( ! rfid.PICC_ReadCardSerial())
+	return;
+	
+	Serial.println(rfid.uid);
+	
+	// Halt PICC and re-select it so DumpToSerial doesn't get confused
+	rfid.PICC_HaltA();
 }
