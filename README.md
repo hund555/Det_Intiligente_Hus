@@ -32,7 +32,7 @@ Test af will.
 * Arduino
 * WiFiNINA
 * ThingSpeak
-* SercomSPISlave (Har lavet en port om for Sercom1, så den bruger PA21(pin 7, SS) istedfor PA18 som ikke eksitere på borded jeg brugere.)
+* SercomSPISlave (Har lavet en port om for Sercom1, så den bruger PA21(pin 7, SS) istedfor PA18 som ikke eksitere på borded jeg brugere)
 
 ## Analyse SPI
 ![image](Billeder/Analyser.PNG)
