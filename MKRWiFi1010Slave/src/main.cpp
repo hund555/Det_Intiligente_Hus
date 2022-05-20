@@ -1,7 +1,8 @@
 #include <Arduino.h>
 #include <WiFiNINA.h>
 #include "arduino_secrets.h"
-#include "ThingSpeak.h" // always include thingspeak header file after other header files and custom macros
+#include <MQTT.h>
+#include <Servo.h>
 
 #include <SercomSPISlave.h>
 SercomSPISlave SPISlave;
@@ -12,6 +13,11 @@ byte buff[2];
 int arrayindex = 0;
 volatile boolean process = false;
 
+// Servo
+Servo minservo;
+
+// MQTT
+MQTTClient mqttclient;
 
 // Wifi
 char ssid[] = SECRET_SSID;   // your network SSID (name) 
@@ -19,24 +25,55 @@ char pass[] = SECRET_PASS;   // your network password
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 WiFiClient  client;
 
-// ThingSpeak
-unsigned long myChannelNumber = SECRET_CH_ID;
-const char * myWriteAPIKey = SECRET_WRITE_APIKEY;
-
-
 // delay
-const int delay20Sek = 20000;
-unsigned long previusMillis20 = 0;
+const int delay30Sek = 30000;
+unsigned long previusMillis30 = 0;
+const int delay1Sek = 1000;
+unsigned long previusMillis1 = 0;
 
 void SERCOM1_Handler(void);
+
+void messageReceived(String &topic, String &payload) 
+{
+  Serial.println("incoming: " + topic + " - " + payload);
+  
+  if (payload == "1")
+  {
+    minservo.write(180);
+  }
+  if (payload == "0")
+  {
+    minservo.write(0);
+  }
+  
+  // Note: Do not use the client in the callback to publish, subscribe or
+  // unsubscribe as it may cause deadlocks when other things arrive while
+  // sending and receiving acknowledgments. Instead, change a global variable,
+  // or push to a queue and handle it in the loop after calling `client.loop()`.
+}
+
+void connect() {
+  delay(1000);
+  Serial.print("checking wifi...");
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.print("\nconnecting...");
+  while (!mqttclient.connect("HSo1FxEWNzU6NhAAKxwIFgM", "HSo1FxEWNzU6NhAAKxwIFgM", "d689s9sY2O2QN0t+pY1LHlVQ")) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println("\nconnected!");
+
+  mqttclient.subscribe("channels/1718632/subscribe/fields/field3", 0);
+}
 
 void setup()
 {  
   Serial.begin(115200);  // Initialize serial
-  while (!Serial) 
-  {
-    ; // wait for serial port to connect. Needed for Leonardo native USB port only
-  }
   
   // check for the WiFi module:
   if (WiFi.status() == WL_NO_MODULE) 
@@ -46,32 +83,30 @@ void setup()
     while (true);
   }
 
-  String fv = WiFi.firmwareVersion();
-  if (fv != "1.0.0") 
-  {
-    Serial.println("Please upgrade the firmware");
-  }
+  WiFi.begin(ssid, pass);
 
-  ThingSpeak.begin(client);  //Initialize ThingSpeak
+  // Servo
+  minservo.attach(14);
 
+  // MQTT
+  mqttclient.begin("mqtt3.thingspeak.com", client);
+  mqttclient.onMessage(messageReceived);
+
+  
+
+  // Sercom
   SPISlave.Sercom1init(); // Sercom 1 but with PA18 changed to PA21
   Serial.println("Sercom1 SPI slave initialized");
+
+  connect();
 }
 
 void loop()
 {
-  // Connect or reconnect to WiFi
-  if(WiFi.status() != WL_CONNECTED)
+  mqttclient.loop();
+  if (!mqttclient.connected()) 
   {
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println(SECRET_SSID);
-    while(WiFi.status() != WL_CONNECTED)
-    {
-      WiFi.begin(ssid, pass); // Connect to WPA/WPA2 network. Change this line if using open or WEP network
-      Serial.print(".");
-      delay(5000);     
-    } 
-    Serial.println("\nConnected.");
+    connect();
   }
 
   if (process)
@@ -83,30 +118,14 @@ void loop()
     Serial.println(buff[1]);
 	}
 
-  if (millis() - previusMillis20 > delay20Sek) 
+  if (millis() - previusMillis30 > delay30Sek) 
   {
-    //int hr = round(h); // Humidity rounded
-		//int tr = round(t); // Temperature rounded
-    
-    // set the fields with the values
-    ThingSpeak.setField(1, buff[0]);
-    ThingSpeak.setField(2, buff[1]);
-
-    // set the status
-    ThingSpeak.setStatus("Data has been sent");
-
-    previusMillis20 = millis();
-
-    // write to the ThingSpeak channel
-    int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
-    if (x == 200)
-    {
-      Serial.println("Channel update successful.");
-    }
-    else 
-    {
-      Serial.println("Problem updating channel. HTTP error code " + String(x));
-    }
+    String payload = "field1=";
+		payload += buff[0];
+		payload += "&field2=";
+    payload += buff[1];
+    mqttclient.publish("channels/1718632/publish", payload, false, 0);
+    previusMillis30 = millis();
   }
 }
 
