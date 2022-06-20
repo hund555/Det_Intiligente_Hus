@@ -4,9 +4,6 @@
 #include <MQTT.h>
 #include <Servo.h>
 
-#include <SercomSPISlave.h>
-SercomSPISlave SPISlave;
-
 #define DEBUG // comment this line out to not print debug data on the serial bus
 
 byte buff[2];
@@ -30,8 +27,6 @@ const int delay30Sek = 30000;
 unsigned long previusMillis30 = 0;
 const int delay1Sek = 1000;
 unsigned long previusMillis1 = 0;
-
-void SERCOM1_Handler(void);
 
 void messageReceived(String &topic, String &payload) 
 {
@@ -61,14 +56,14 @@ void connect() {
   }
 
   Serial.print("\nconnecting...");
-  while (!mqttclient.connect("HSo1FxEWNzU6NhAAKxwIFgM", "HSo1FxEWNzU6NhAAKxwIFgM", "d689s9sY2O2QN0t+pY1LHlVQ")) {
+  while (!mqttclient.connect("Allan", "guest", "guest")) {
     Serial.print(".");
     delay(500);
   }
 
   Serial.println("\nconnected!");
 
-  mqttclient.subscribe("channels/1718632/subscribe/fields/field3", 0);
+  mqttclient.subscribe("remote/servo", 0);
 }
 
 void setup()
@@ -89,14 +84,8 @@ void setup()
   minservo.attach(14);
 
   // MQTT
-  mqttclient.begin("mqtt3.thingspeak.com", client);
+  mqttclient.begin("10.135.16.166", client);
   mqttclient.onMessage(messageReceived);
-
-  
-
-  // Sercom
-  SPISlave.Sercom1init(); // Sercom 1 but with PA18 changed to PA21
-  Serial.println("Sercom1 SPI slave initialized");
 
   connect();
 }
@@ -113,93 +102,20 @@ void loop()
 	{
 		process = false;		// reset the process
     Serial.print("Humidity: ");
-		Serial.println (buff[0]);
+		Serial.println (random(20, 30));
     Serial.print("Temp: ");
-    Serial.println(buff[1]);
+    Serial.println(random(40, 60));
 	}
 
-  if (millis() - previusMillis30 > delay30Sek) 
+  if (millis() - previusMillis30 > delay1Sek) 
   {
-    String payload = "field1=";
-		payload += buff[0];
-		payload += "&field2=";
-    payload += buff[1];
-    mqttclient.publish("channels/1718632/publish", payload, false, 0);
+    String payload = "Test Humidity=";
+		payload += random(40, 60);
+		payload += ",Temperature=";
+    payload += random(20, 30);
+
+    Serial.println(payload);
+    mqttclient.publish("influx", payload, false, 0);
     previusMillis30 = millis();
   }
-}
-
-void SERCOM1_Handler() // 25.7 Register Summary, page 454 atmel 42181, samd21
-{
-  #ifdef DEBUG
-    Serial.println("In SPI Interrupt");
-  #endif
-  uint8_t data = 0;
-  uint8_t interrupts = SERCOM1->SPI.INTFLAG.reg; //Read SPI interrupt register
-  #ifdef DEBUG
-    Serial.print("Interrupt: "); Serial.println(interrupts);
-  #endif
-  
-  if(interrupts & (1<<3)) // 8 = 1000 = SSL
-  {
-    #ifdef DEBUG
-      Serial.println("SPI SSL Interupt");
-    #endif
-    SERCOM1->SPI.INTFLAG.bit.SSL = 1; //clear slave select interrupt
-    //data = SERCOM1->SPI.DATA.reg; //Read data register
-    #ifdef DEBUG
-      Serial.print("DATA: "); Serial.println(data);
-    #endif
-    //SERCOM1->SPI.INTFLAG.bit.RXC = 1; //clear receive complete interrupt
-  }
-  
-  // This is where data is received, and is written to a buffer, which is used in the main loop
-  if(interrupts & (1<<2)) // 4 = 0100 = RXC
-  {
-    #ifdef DEBUG
-      Serial.println("SPI Data Received Complete Interrupt");
-    #endif
-    data = SERCOM1->SPI.DATA.reg; //Read data register
-    
-    if (data == 255)
-	  {
-		  arrayindex = 0;
-      process = true;
-	  }
-    else
-    {
-      buff[arrayindex] = data-50;
-      arrayindex++;
-      if (arrayindex >= 2)
-      {
-        arrayindex = 0;
-      }
-    }
-    #ifdef DEBUG
-      Serial.print("DATA: ");
-      Serial.println(data);
-    #endif
-    SERCOM1->SPI.INTFLAG.bit.RXC = 1; //clear receive complete interrupt
-  }
-  
-  if(interrupts & (1<<1)) // 2 = 0010 = TXC
-  {
-    #ifdef DEBUG
-      Serial.println("SPI Data Transmit Complete Interrupt");
-    #endif
-    SERCOM1->SPI.INTFLAG.bit.TXC = 1; //clear receive complete interrupt
-  }
-  
-  if(interrupts & (1<<0)) // 1 = 0001 = DRE
-  {
-    #ifdef DEBUG
-      Serial.println("SPI Data Register Empty Interrupt");
-    #endif
-    SERCOM1->SPI.DATA.reg = 0xAA;
-    //SERCOM1->SPI.INTFLAG.bit.DRE = 1;
-  }
-  
-  #ifdef DEBUG
-    Serial.println("----------");
-  #endif
 }
